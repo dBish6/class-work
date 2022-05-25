@@ -1,0 +1,14 @@
+{
+  "name": "qap1",
+  "version": "1.0.0",
+  "description": "Understanding core global objects.",
+  "main": "http.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Bishop",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.14.0"
+  }
+}
