@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 1) How many hours did it take for me to complete this assessment? Not very long, I'm sorry but I didn't keep track of each individual part.. but I can
     tell you the total. Overall, I started friday and was at it till supper, that's what I usually do, so 5 hours that day. Also, I'm not just doing the assignment in
     that amount of time, I was like at these modules thinking what ones i'm going to do, reading about them and I watched a video, etc. So, say 3 hours
@@ -14,4 +15,22 @@
     a working clock with moment.js and display it on an HTML page. I just ended up making the clock in the console, I know we'll hopfully learn how 
     to do that.
 
+=======
+1) How many hours did it take for me to complete this assessment? Not very long, I'm sorry but I didn't keep track of each individual part.. but I can
+    tell you the total. Overall, I started friday and was at it till supper, that's what I usually do, so 5 hours that day. Also, I'm not just doing the assignment in
+    that amount of time, I was like at these modules thinking what ones i'm going to do, reading about them and I watched a video, etc. So, say 3 hours
+    actually on the assessment that day. Saturday I was at it all day, getting of track looking other things that has to do with it, you know. So, that day was 
+    around 6 hours just dilly dolling around and getting the whole thing done that day. Now it's Sunday and I'm finished for what I have to do. Today I just 
+    was looking at it touching it up, like 1 hour today.
+
+2) Online resources I used was W3Schools, code from class and some of my code, Node.js documentation, this cool Node.js Learn on the documentation 
+     site and YouTube.
+
+3) Nope didn't need to ask anything to friends.
+
+4) I did ask Peter about using require.js with an HTML page, that's when I was getting off track, getting ahead of myself and was going to make
+    a working clock with moment.js and display it on an HTML page. I just ended up making the clock in the console, I know we'll hopfully learn how 
+    to do that.
+
+>>>>>>> 5867515654528e5dbc5e45f4a59476da6ff5ed21
 5) This was a very easy assignment, I'd say 2/10 difficulty for me. I do feel confident with using Node in the future.
