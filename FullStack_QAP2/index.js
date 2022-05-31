@@ -24,7 +24,6 @@ const requestListener = (req, res) => {
     case "/":
       path += "index.html";
       res.statusCode = 200; // OK
-      // logEvents.indexPage(path);
       displayFile(path);
       break;
     case "/about":
@@ -59,11 +58,6 @@ const requestListener = (req, res) => {
       res.statusCode = 204; // No Content - Server processes the response corrently but doesn't return any content (look in the network tool when entered).
       displayFile(path);
       break;
-    // case "/moved":
-    //   res.statusCode = 302; // Found
-    //   res.setHeader("Location", "/moved");
-    //   res.end();
-    //   break;
     case "/jokeFrom1998":
       path += "jokeFrom1998.html";
       res.statusCode = 418; // I'm a Teapot - Server refuses to brew coffee because it is, permanently, a teapot.
@@ -74,8 +68,9 @@ const requestListener = (req, res) => {
       res.statusCode = 451; // Unavailable for Legal Reasons - Server owner prohibit access for request.
       displayFile(path);
       break;
-    default: // Not Found
+    default:
       path += "404.html";
+      // Not Found
       res.statusCode = 404;
       displayFile(path);
       break;
