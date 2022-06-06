@@ -1,1 +1,0 @@
-SELECT actor_id, first_name, last_name FROM public.actor
