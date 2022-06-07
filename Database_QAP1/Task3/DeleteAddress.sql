@@ -1,3 +1,0 @@
--- The address was already gone because I changed it to 601...
-DELETE FROM public.customer
-	WHERE address_id = '600';
