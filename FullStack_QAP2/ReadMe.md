@@ -1,3 +1,3 @@
 Running the Server:
-npm install
+npm install,
 npm run watch
