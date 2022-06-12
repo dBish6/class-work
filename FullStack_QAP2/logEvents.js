@@ -1,11 +1,6 @@
 const moment = require("moment");
 const { v4: uuidv4 } = require("uuid");
 
-const EventEmitter = require("events");
-class MyEmitter extends EventEmitter {}
-// initialize an new emitter object
-const myEmitter = new MyEmitter();
-
 const fs = require("fs");
 // Just a class withen the fs module
 const fsPromises = require("fs").promises;
