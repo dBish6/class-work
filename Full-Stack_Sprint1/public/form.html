@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In Form</title>
+
+    <link rel="icon" type="image/png" href="../public/favicon-16x16.png" />
+    <link rel="stylesheet" href="../public/index.css" type="text/css" />
+  </head>
+  <body>
+    <header id="navContainer">
+      <nav id="navBar">
+        <div id="left">
+          <a href="/">Home</a>
+        </div>
+        <div id="right"></div>
+      </nav>
+    </header>
+    <h2>Generate Token!</h2>
+    <form id="form" action="/newToken">
+      <div class="field">
+        <label for="username">Username:</label>
+        <input
+          type="text"
+          name="username"
+          id="name"
+          placeholder="Enter a Username"
+        />
+      </div>
+      <div class="field">
+        <label for="username">Email:</label>
+        <input
+          type="text"
+          name="email"
+          id="email"
+          placeholder="Enter Your Email"
+        />
+      </div>
+      <div class="field">
+        <label for="username">Phone:</label>
+        <input
+          type="text"
+          name="phone"
+          id="phone"
+          placeholder="Enter Phone Number"
+        />
+      </div>
+      <div class="field">
+        <button type="submit" id="btn">Generate</button>
+      </div>
+    </form>
+  </body>
+  <script src="../token.js"></script>
+</html>

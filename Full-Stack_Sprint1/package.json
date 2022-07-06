@@ -1,0 +1,28 @@
+{
+  "name": "full-stack_sprint1",
+  "version": "1.0.0",
+  "description": "Semester 3 Full-Stack sprint 1 project.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dBish6/class-work.git"
+  },
+  "author": "David Bishop",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dBish6/class-work/issues"
+  },
+  "homepage": "https://github.com/dBish6/class-work#readme",
+  "dependencies": {
+    "crc": "^4.1.1",
+    "moment": "^2.29.3",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}

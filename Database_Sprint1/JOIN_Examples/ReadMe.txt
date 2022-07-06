@@ -1,0 +1,1 @@
+I actually done 9 JOIN examples, counting multiple joins. Hope you didn't mean 6+ JOIN example files... who am I kidding, this should be well enough. Tell me if I'm wrong.

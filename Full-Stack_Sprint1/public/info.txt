@@ -1,0 +1,28 @@
+
+Help txt:
+
+app init <command>
+app config <command>
+app token <command>
+
+List of all available commands:
+
+app init help                Shows the usage files that was created for help.
+app init --all               Creates the folder structure, usage files and config file.
+app init --init              Creates the folder structure and add usage files.
+app init --cat               Creates the config file with the default settings.
+app init --undo              Deletes the usage files and config file.
+app config help              Shows the usage file that was created for help.
+app config --show            Displays a list of the current config settings.
+app config --reset                Resets the config file with default settings.
+app config --alter <key> <value>        Sets a specific config setting.
+app token help                                Shows the usage file that was initialized.
+app token --create                            Creates an empty token.json file to get started.
+app token --undo                              Deletes the token.json file.          
+app token --count                             displays a count of the tokens created.
+app token --new <username> <email> <phone>    Generates a token for a given username, email, phone and saves the token to tokens.json.
+app token --search <username>                 Logs the token for the given username.
+app token --alter <username> <key> <value>    Changes a specific token value by the given username.
+
+Event Emitters:
+The events format is as follows; dataTime, id, message, and level.
