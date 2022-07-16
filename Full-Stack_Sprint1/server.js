@@ -1,4 +1,4 @@
-/* Sever.js
+/* sever.js
    List of functions for running the node HTTP sever on LocalHost. 
 
    Authors: David Bishop, Jacob Pritchett,
