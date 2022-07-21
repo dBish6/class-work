@@ -16,6 +16,7 @@
    July 17, 2022, David, added favicon icon and styled all partials and index.ejs.
    July 18, 2022, David, styled indexDetails.ejs and 404.ejs.
    July 21, 2022, David, fixes and styled.
+   
 */
 
 const express = require("express");
