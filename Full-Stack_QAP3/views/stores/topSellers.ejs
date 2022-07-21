@@ -1,0 +1,17 @@
+<html lang="en">
+<%- include("../partials/header.ejs") %>
+
+<body>
+  <%- include("../partials/nav.ejs") %>
+  <h2 class="topSell_header">Top Rentals</h2>
+  <div class="topRentals_container">
+    <% topRentals.forEach(topRental => { %>
+    <div class="topRental">
+      <p><b><%= topRental.title %></b></p><span>&nbsp|&nbspGross: $<%= topRental.sum %></span>
+    </div>
+    <% }) %>
+  </div>
+</body>
+<%- include("../partials/footer.ejs") %>
+
+</html>

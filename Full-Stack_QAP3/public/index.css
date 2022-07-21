@@ -1,0 +1,694 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@500&family=Prompt:wght@400;500;600&display=swap");
+
+/* Global */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+
+html {
+  background: url(waves.svg);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  min-height: 100%;
+}
+
+footer {
+  display: flex;
+  justify-content: flex-end;
+  color: rgba(174, 174, 174);
+  font-style: italic;
+  position: fixed;
+  bottom: 0;
+  width: 95%;
+  height: 2.5rem;
+}
+
+/* Nav Bar */
+
+.navBar {
+  display: flex;
+  position: fixed;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 2.625rem 1rem 2.625rem;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  /* So text won't go through a fixed navbar. */
+  z-index: 1;
+
+  background: linear-gradient(145deg, #22a7f0, #115f9a);
+  box-shadow: 10px 24px 300px #22a7f0, -10px -24px 300px #115f9a;
+  border-bottom: 2px solid rgb(255, 255, 255, 0.7);
+  /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.35); */
+}
+
+.navBar .left a,
+.navBar .right a {
+  display: inline-block;
+  padding: 14px;
+
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 21px;
+  color: rgb(190, 221, 238);
+}
+
+.left a:hover,
+.right a:hover {
+  border-radius: 50px;
+  background-color: rgba(72, 182, 196, 0.5);
+  color: rgb(255, 255, 255, 0.9);
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.left a:active,
+.right a:active {
+  background-color: white;
+}
+
+.title {
+  font-family: "Prompt", sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  letter-spacing: 1px;
+  color: rgb(255, 255, 255, 0.85);
+  cursor: default;
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.42);
+}
+
+/* Error Pages */
+
+.err_txt {
+  position: relative;
+  top: 87px;
+
+  margin: 1rem;
+  float: left;
+}
+
+.err_txt p {
+  color: rgb(37, 37, 37);
+  font-size: 21px;
+}
+
+.err_txt b {
+  color: red;
+}
+
+.err_txt .err_descrip {
+  color: rgb(37, 37, 37);
+  margin-top: 1rem;
+  font-size: 19px;
+}
+
+/* index Page */
+
+.index_header {
+  position: relative;
+  top: 87px;
+
+  font-family: "Prompt", sans-serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 28px;
+  margin: 1rem auto 1rem 1rem;
+  color: rgb(25, 131, 197);
+}
+
+.film_container {
+  position: relative;
+  top: 87px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-column-gap: 35%; */
+  grid-row-gap: 0.5rem;
+  margin: auto 1rem auto 1rem;
+}
+
+.film a {
+  text-decoration: none;
+}
+
+.films_avil p {
+  position: relative;
+  top: 87px;
+
+  margin: 2rem auto auto 1rem;
+  color: rgb(37, 37, 37);
+}
+
+@media only screen and (max-width: 1123px) {
+  .index_header {
+    top: 140px;
+  }
+
+  .film_container {
+    top: 140px;
+  }
+
+  .films_avil p {
+    top: 140px;
+  }
+}
+
+@media only screen and (max-width: 804px) {
+  .index_header {
+    top: 165px;
+  }
+
+  .film_container {
+    top: 165px;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 0.5rem;
+    grid-column-gap: 0.5rem;
+  }
+
+  .films_avil p {
+    top: 165px;
+  }
+
+  footer {
+    justify-content: center;
+    width: none;
+    height: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 582px) {
+  .index_header {
+    top: 190px;
+  }
+
+  .film_container {
+    top: 190px;
+  }
+
+  .films_avil p {
+    top: 190px;
+  }
+}
+
+/* Film Details Page */
+
+.film_details_container {
+  position: relative;
+  top: 87px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.film_details_container .details_header {
+  margin: 1rem auto 1rem 1rem;
+  color: rgb(25, 131, 197);
+  font-family: "Prompt", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  letter-spacing: 2px;
+}
+
+.film_details {
+  display: flex;
+  flex-direction: row;
+
+  margin: auto 1rem auto 1rem;
+  color: rgb(37, 37, 37);
+}
+
+.film_details img {
+  float: left;
+}
+
+.small_details {
+  display: flex;
+  flex-direction: column;
+
+  margin-left: 1rem;
+  font-size: 18px;
+}
+
+.small_details .actors {
+  position: relative;
+  bottom: 0;
+  width: 35%;
+  margin-top: 0.5rem;
+}
+
+.small_details .actors h4 {
+  font-size: 18px;
+}
+
+.small_details .actors p {
+  font-size: 16px;
+}
+
+.description {
+  margin: 0.5rem 1rem auto 1rem;
+  width: 35%;
+}
+
+.description h4 {
+  font-size: 18px;
+}
+
+.description p {
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 1123px) {
+  .film_details_container {
+    top: 140px;
+  }
+}
+
+@media only screen and (max-width: 804px) {
+  .film_details_container {
+    top: 165px;
+  }
+
+  .description {
+    width: 55%;
+  }
+
+  footer {
+    justify-content: center;
+    width: none;
+    height: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 582px) {
+  .film_details_container {
+    top: 190px;
+  }
+
+  .small_details {
+    margin-top: 0.5rem;
+    margin-left: 0px;
+    width: auto;
+  }
+
+  .film_details {
+    flex-direction: column;
+  }
+
+  footer {
+    height: auto;
+  }
+}
+
+/* Resent Customers Page */
+
+.resent_header {
+  position: relative;
+  top: 87px;
+
+  font-family: "Prompt", sans-serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 28px;
+  margin: 1rem auto 1rem 1rem;
+  color: rgb(25, 131, 197);
+}
+
+.customers_container {
+  position: relative;
+  top: 87px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 0.5rem;
+  margin: auto 1rem auto 1rem;
+}
+
+.customer a {
+  text-decoration: none;
+}
+
+.customer button {
+  background-color: #22a7f0;
+  color: rgba(255, 255, 255, 0.65);
+  padding: 4px;
+  margin-left: 0.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13.5px;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.35);
+}
+
+.customer button:hover {
+  background-color: rgba(0, 167, 0, 0.65);
+  color: rgb(255, 255, 255, 0.9);
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+@media only screen and (max-width: 1123px) {
+  .resent_header {
+    top: 140px;
+  }
+
+  .customers_container {
+    top: 140px;
+  }
+}
+
+@media only screen and (max-width: 804px) {
+  .resent_header {
+    top: 165px;
+  }
+
+  .customers_container {
+    top: 165px;
+  }
+
+  footer {
+    justify-content: center;
+    width: none;
+    height: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 582px) {
+  .resent_header {
+    top: 190px;
+  }
+
+  .customers_container {
+    top: 190px;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 0.5rem;
+    grid-column-gap: 0.5rem;
+  }
+}
+
+/* Customer Rentals Page */
+
+.rental_container {
+  position: relative;
+  top: 87px;
+
+  margin: auto 1rem auto 1rem;
+}
+
+.rental_container h2 {
+  font-family: "Prompt", sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 26px;
+  margin: 1rem auto 1rem auto;
+  color: rgb(25, 131, 197);
+}
+
+.rental_container .rental {
+  display: flex;
+  flex-direction: row;
+}
+
+.rental_container .rental p {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  color: rgb(37, 37, 37);
+  /* border: 1px solid rgb(37, 37, 37, 0.4); */
+  padding: 4px;
+}
+
+@media only screen and (max-width: 1123px) {
+  .rental_container {
+    top: 140px;
+  }
+}
+
+@media only screen and (max-width: 804px) {
+  .rental_container {
+    top: 165px;
+  }
+
+  footer {
+    justify-content: center;
+    width: none;
+    height: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 582px) {
+  .rental_container {
+    top: 190px;
+  }
+}
+
+/* Edit Customer Page */
+
+.edit_form {
+  position: relative;
+  top: 230px;
+
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.edit_form input {
+  border: 0;
+  margin: 1rem 0.5rem 1rem 0.5rem;
+  padding: 4px;
+  min-width: 8%;
+  font-size: 16px;
+  border-bottom: 2px solid rgb(17, 95, 154, 0.5);
+  background: transparent;
+}
+
+.edit_form input:focus {
+  padding-bottom: 6px;
+  font-weight: 600;
+  border-width: 3px;
+  outline: none;
+  transition: 0.3s;
+  border-image: linear-gradient(to right, #22a7f0, #115f9a);
+  border-image-slice: 1;
+}
+
+.edit_form input:focus::placeholder {
+  color: rgb(17, 95, 154);
+}
+
+.edit_form button {
+  width: 125px;
+  height: 50px;
+  border: none;
+  font-size: 1rem;
+  color: rgb(255, 255, 255, 0.9);
+  background-color: rgb(17, 95, 154, 0.5);
+  cursor: pointer;
+}
+
+.edit_form button:hover {
+  background-color: rgb(17, 95, 154, 0.6);
+  border: 3px solid;
+  border-image: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  border-image-slice: 1;
+  transition: 0.3s;
+}
+
+/* Missing Returns Page */
+
+.missing_container {
+  position: relative;
+  top: 87px;
+  margin-bottom: 6%;
+}
+
+.missing_container h2 {
+  font-family: "Prompt", sans-serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 28px;
+  margin: 1rem auto 1rem 1rem;
+  color: rgb(25, 131, 197);
+}
+
+.missing_container .missing_descrip {
+  color: rgb(37, 37, 37);
+  margin: auto auto 1rem 1rem;
+}
+
+.missing_container hr {
+  margin: auto 1rem 1rem 1rem;
+  width: 54%;
+  color: rgb(17, 95, 154, 0.5);
+}
+
+.missing_container .missing_rental {
+  color: rgb(37, 37, 37);
+  margin: 0.5rem 1rem 0.5rem 1rem;
+}
+
+@media only screen and (max-width: 1123px) {
+  .missing_container {
+    top: 140px;
+  }
+}
+
+@media only screen and (max-width: 804px) {
+  .missing_container {
+    top: 165px;
+  }
+
+  footer {
+    justify-content: center;
+    width: none;
+    height: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 582px) {
+  .missing_container {
+    top: 190px;
+  }
+}
+
+/* Stores Page */
+
+.stores_container {
+  position: relative;
+  top: 87px;
+
+  margin: auto 1rem auto 1rem;
+}
+
+.stores_container h2 {
+  font-family: "Prompt", sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 28px;
+  margin: 1rem auto 1rem 1rem;
+  color: rgb(25, 131, 197);
+}
+
+.stores_container .store {
+  margin: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.store a {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 1123px) {
+  .stores_container {
+    top: 140px;
+  }
+}
+
+@media only screen and (max-width: 804px) {
+  .stores_container {
+    top: 165px;
+  }
+
+  footer {
+    justify-content: center;
+    width: none;
+    height: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 582px) {
+  .stores_container {
+    top: 190px;
+  }
+}
+
+/* Top Sellers Page */
+
+.topSell_header {
+  position: relative;
+  top: 87px;
+
+  font-family: "Prompt", sans-serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 28px;
+  margin: 1rem auto 1rem 1rem;
+  color: rgb(25, 131, 197);
+}
+
+.topRentals_container {
+  position: relative;
+  top: 87px;
+
+  margin: auto 1rem auto 1rem;
+}
+
+.topRental {
+  display: flex;
+  flex-direction: row;
+  margin: 0.5rem auto 0.5rem auto;
+}
+
+.topRental p {
+  color: rgb(37, 37, 37);
+  font-size: 19px;
+}
+
+.topRental span {
+  color: rgb(37, 37, 37);
+  font-size: 17px;
+}
+
+.topRentals_container div:first-child p {
+  color: gold;
+}
+
+@media only screen and (max-width: 1123px) {
+  .topSell_header {
+    top: 140px;
+  }
+
+  .topRentals_container {
+    top: 140px;
+  }
+}
+
+@media only screen and (max-width: 804px) {
+  .topSell_header {
+    top: 165px;
+  }
+
+  .topRentals_container {
+    top: 165px;
+  }
+
+  footer {
+    justify-content: center;
+    width: none;
+    height: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 582px) {
+  .topSell_header {
+    top: 190px;
+  }
+
+  .topRentals_container {
+    top: 190px;
+  }
+}

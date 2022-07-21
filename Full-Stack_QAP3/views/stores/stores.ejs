@@ -1,0 +1,19 @@
+<!-- First store is Alberta and second is QLD -->
+<html lang="en">
+<%- include("../partials/header.ejs") %>
+
+<body>
+  <%- include("../partials/nav.ejs") %>
+  <div class="stores_container">
+    <h2>Pick a Store</h2>
+    <div class="store">
+      <a href="<%= stores[0].store_id %>">Alberta Store</a>
+    </div>
+    <div class="store">
+      <a href="<%= stores[1].store_id %>">QLD Store</a>
+    </div>
+  </div>
+</body>
+<%- include("../partials/footer.ejs") %>
+
+</html>

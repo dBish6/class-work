@@ -1,0 +1,19 @@
+<html lang="en">
+<%- include("../partials/header.ejs") %>
+
+<body>
+  <%- include("../partials/nav.ejs") %>
+  <div class="missing_container">
+    <h2>Missing Rentals</h2>
+    <hr>
+    <% missingRentals.forEach(missingRental => { %>
+    <div class="missing_rental">
+      <p>Rented on: <%= missingRental.rental_date %> - <%= missingRental.full_name %> has
+        "<%= missingRental.title %>" not returned.</p>
+    </div>
+    <% }) %>
+  </div>
+</body>
+<%- include("../partials/footer.ejs") %>
+
+</html>

@@ -1,0 +1,19 @@
+<html lang="en">
+  <%- include("./partials/header.ejs") %>
+
+  <body>
+    <%- include("./partials/nav.ejs") %>
+    <h2 class="index_header">Films Available</h2>
+    <div class="film_container">
+      <% films.forEach(film => { %>
+      <p class="film">
+        <a href="<%= film.fid %>"> <b><%= film.title %></b></a>
+      </p>
+      <% }) %>
+    </div>
+    <div class="films_avil">
+      <p><%= films.length %> Films Available</p>
+    </div>
+  </body>
+  <%- include("./partials/footer.ejs") %>
+</html>

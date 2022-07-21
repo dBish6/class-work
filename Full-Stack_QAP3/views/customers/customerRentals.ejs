@@ -1,0 +1,19 @@
+<html lang="en">
+<%- include('../partials/header.ejs') %>
+<body>
+  <%- include('../partials/nav.ejs') %>
+  <div class="rental_container"> 
+    <h2><%= custRentals[0].full_name %>'s Resent Rentals for the Year</h2>
+    <% custRentals.forEach(rental => { %>
+    <div class="rental">
+      <p><%= rental.rental_date %></p> <p><b><%= rental.title %></b> </p>
+      <% if (rental.return_date === null) {%>
+      <p> Returned: False</p> <% } else { %>
+      <p> Returned: True</p>
+      <% } %>
+    </div>
+    <% }) %>
+  </div>
+</body>
+<%- include('../partials/footer.ejs') %>
+</html>

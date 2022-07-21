@@ -1,0 +1,14 @@
+<html lang="en">
+<%- include('../partials/header.ejs') %>
+
+<body>
+  <%- include('../partials/nav.ejs') %>
+  <form class="edit_form" action="/customers/edit/complete/<%= locals.editId %>?_method=PATCH" method="POST">
+    <input type="text" placeholder="First Name" id="<%= locals.editId %>" name="first_name" value="<%= locals.editFirstName %>" required>
+    <input type="text" placeholder="Last Name" id="<%= locals.editId %>" name="last_name" value="<%= locals.editLastName %>" required>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+<%- include('../partials/footer.ejs') %>
+
+</html>

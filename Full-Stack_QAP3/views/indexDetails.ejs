@@ -1,0 +1,32 @@
+<html lang="en">
+<%- include('./partials/header.ejs') %>
+
+<body>
+  <%- include('./partials/nav.ejs') %>
+  <div class="film_details_container">
+    <h2 class="details_header"><%= filmDetails[0].title %></h2>
+    <% filmDetails.forEach(film => { %>
+    <div class="film_details">
+      <img src="/no-image.png" alt="no-image.png" width="225" height="225">
+      <div class="small_details">
+        <div>
+          <p>Category: <%= film.category %></p>
+          <p>Length: <%= film.period %> </p>
+          <p>Rating: <%= film.rating %> </p>
+        </div>
+        <div class="actors">
+          <h4>Actors:</h4>
+          <p><%= film.actors %>.</p>
+        </div>
+      </div>
+    </div>
+    <div class="description">
+      <h4>Description:</h4>
+      <p><%= film.description %></p>
+    </div>
+    <% }) %>
+  </div>
+</body>
+<%- include('./partials/footer.ejs') %>
+
+</html>
