@@ -19,7 +19,7 @@
 const dal = require("./postgresDB");
 
 // Fetching the sql query from the database.
-// Fetches all resent customers name within the last 12 months from the vw_resentRentals view.
+// Fetches all resent customers name within the last 12 months from the vw_custResentUpdates view.
 const resentCustomers = async () => {
   let response;
   try {
