@@ -86,7 +86,7 @@ const tokenApp = () => {
   }
 };
 
-// Creates the token.json file in the json folder if it does not exist asynchronously.
+// Creates the token.json file in the json folder if it does not exist.
 const tokenFile = async () => {
   try {
     if (DEBUG) console.log("Made it to: tokenFile()");
