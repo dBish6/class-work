@@ -4,6 +4,7 @@ This is my sprint project from Semester 3 2022 in my Solfware Development Course
 
 Running the Server:
 npm run watch
+
 For the list of commands:
 node app help
 
