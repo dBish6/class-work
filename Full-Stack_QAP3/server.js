@@ -83,7 +83,6 @@ app.get("/:id", async (req, res) => {
     const filmDetails = await filmData.getFilmDetails(req.params.id);
     if (DEBUG) console.log(filmDetails);
     if (filmDetails.length === 0) {
-      // Send the 404 status code but send the following text.
       res.status(502).render("502");
     } else {
       // Render this route with indexDetails.ejs with the getFilmDetails function.
