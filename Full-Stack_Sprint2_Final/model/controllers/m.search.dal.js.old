@@ -1,0 +1,23 @@
+/* m.search.dal.js
+   List of dal functions that has to do with searching by MongoDb.
+   fullSearch() - searches by an text based index from sample_mflix database.
+
+   Author: David Bishop, Dominic Whelan, Chris Doucette and Blake Waddleton
+   Creation Date: August 8, 2022
+   Updates:
+   Date, Author, Description
+   Aug 8, 2022, David; impemented first version of the fullSearch function.
+   Aug 9, 2022, David; impemented a new version of fullSearch() with the global collection varaible and more short hand.
+   
+*/
+
+// Can search by cast, fullplot, genres and title.
+const fullSearch = async (text) => {
+  try {
+    return await collection.find({ $text: { $search: text } }).toArray();
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+module.exports = { fullSearch };

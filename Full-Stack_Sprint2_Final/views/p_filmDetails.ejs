@@ -1,0 +1,41 @@
+<html lang="en">
+<%- include('./partials/header.ejs') %>
+
+<body>
+  <%- include('./partials/nav.ejs') %>
+  <img class="postgresLogo" src="/postgres-icon.webp" alt="postgres-icon.webp" width="38px" height="38px">
+  <div class="filmDetailsContainer">
+    <h2 class="details_header"><%= pMovies[0].title %> (<%= pMovies[0].release_year %>)</h2>
+    <img src="/no-image.webp" alt="no-image.webp" width="225" height="225">
+    <div class="filmDetails">
+      <div class="smallDetails">
+        <h3>Details</h3>
+        <p><b>Category:</b>&nbsp&nbsp<%= pMovies[0].category %></p>
+        <p><b>Length:</b>&nbsp&nbsp<%= pMovies[0].period %> </p>
+        <p><b>Rating:</b>&nbsp&nbsp<%= pMovies[0].rating %> </p>
+      </div>
+      <div class="actors">
+        <h3>Actors:</h3>
+        <p><%= pMovies[0].actors %>.</p>
+      </div>
+    </div>
+
+    <form class="TextArea" action="/<%= pMovies[0].fid %>/post-review" method="POST">
+      <div>
+        <textarea placeholder="Write a review, it will be saved to your account." name="paragraph_text" cols="50" rows="5" maxlength="1150" required></textarea>
+        <div class="txtBtn">
+          <button type="submit">Submit</button>
+          <% if(messages.success) { %> <small><%- messages.success %></small> <% } %>
+        </div>
+      </div>
+    </form>
+
+  </div>
+  <div class="gresDescription">
+    <h3>Description:</h3>
+    <p><%= pMovies[0].description %>.</p>
+  </div>
+</body>
+<%- include('./partials/footer.ejs') %>
+
+</html>

@@ -1,0 +1,14 @@
+<html lang="en">
+<%- include('./partials/header.ejs') %>
+
+<body>
+  <%- include('./partials/nav.ejs') %>
+  <form class="formContainer" action="/trees/create/new" method="POST">
+    <label for="numbers">Please insert comma seperated numbers for your binary tree!</label>
+    <input type="text" placeholder="Enter nodes" name="numbers">
+    <button type="submit">Submit</button>
+    <small for="numbers">Format: 6,5,4</small>
+  </form>
+</body>
+
+</html>

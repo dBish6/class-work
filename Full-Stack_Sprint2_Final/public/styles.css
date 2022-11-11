@@ -1,0 +1,1675 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500&family=Lato&family=Montserrat:wght@500&family=Oldenburg&family=Righteous&display=swap");
+
+/* Global */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+
+html {
+  background-color: rgba(67, 198, 172, 0.15);
+  /* background-color: rgba(196, 196, 196, 0.2); */
+  background-color: rgba(229, 229, 229, 0.6);
+}
+
+body {
+  /* flex-grow: 1; */
+  overflow-x: hidden;
+}
+
+.mainFooter {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+
+  color: rgba(174, 174, 174);
+  margin: auto 1rem auto 1rem;
+}
+
+.mainFooter div {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3px;
+  position: fixed;
+  bottom: 10;
+}
+
+/* .altFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  color: rgba(174, 174, 174);
+  background-color: rgb(25, 22, 84);
+  background-color: rgb(196, 255, 244);
+  background-image: linear-gradient(rgb(37, 37, 37, 0.7) 5%, rgb(255, 255, 255, 0.7));
+  background-color: rgb(67, 198, 172);
+  background-image: linear-gradient(rgb(37, 37, 37, 0.7) 5%, rgb(255, 255, 255, 0.7));
+  border-top: 2px solid rgb(255, 255, 255, 0.7);
+  box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.35);
+  padding: 0.8rem;
+} */
+
+.altFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  color: rgba(174, 174, 174);
+  /* background-color: rgb(25, 22, 84); */
+  background-image: linear-gradient(
+    170deg,
+    rgb(25, 22, 84) 30%,
+    rgb(67, 198, 172)
+  );
+  border-top: 2px solid rgb(255, 255, 255, 0.7);
+  box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.35);
+  padding: 0.8rem;
+}
+
+footer .ital {
+  font-style: italic;
+}
+
+/* Nav Bar */
+
+.navBarContainer {
+  position: relative;
+  display: flex;
+  padding: 1rem 2.625rem 1rem 2.625rem;
+  align-items: center;
+  justify-content: space-between;
+
+  /* background: linear-gradient(145deg, rgb(67, 198, 172), rgb(25, 22, 84)); */
+  background: linear-gradient(145deg, rgb(25, 22, 84), rgb(67, 198, 172) 50%);
+  /* background: linear-gradient(145deg, rgb(25, 22, 84), rgb(73, 227, 178) 50%); */
+  border-bottom: 2px solid rgb(255, 255, 255, 0.7);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.35);
+}
+
+.navBarContainer .left img {
+  position: relative;
+  float: left;
+  top: 6px;
+}
+
+.navBarContainer .left h1 {
+  float: left;
+  text-align: center;
+  margin: 19.92px 1rem 19.92px 1rem;
+  color: rgb(67, 198, 172);
+  -webkit-text-stroke: 1.2px rgb(202, 202, 202);
+
+  font-family: "Righteous", cursive;
+  font-weight: 500;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+.navBarContainer .navFlex {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navBarContainer .navFlex .right {
+  margin: auto 1rem auto 5rem;
+  padding-left: 1rem;
+}
+
+.navBarContainer .navFlex .right img {
+  position: relative;
+  float: left;
+  top: 11px;
+}
+
+.navBarContainer .navFlex .right a,
+.navBarContainer .navFlex .home a {
+  display: inline-block;
+  padding: 14px;
+
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.5px;
+  font-size: 23px;
+  color: rgb(255, 255, 255, 0.68);
+}
+
+.navBarContainer .navFlex .home a:hover,
+.navBarContainer .navFlex .right:hover {
+  border-radius: 50px;
+  background-color: rgba(25, 22, 84, 0.15);
+  color: rgb(255, 255, 255, 0.89);
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.navBarContainer .navFlex .right a:hover {
+  color: rgb(255, 255, 255, 0.89);
+  transition: all 0.3s ease 0s;
+}
+
+.navBarContainer .navFlex .right:active,
+.navBarContainer .navFlex .home a:active {
+  background-color: white;
+}
+
+@media only screen and (max-width: 845px) {
+  .navBarContainer .left h1 {
+    margin: 0 0 0 1rem;
+  }
+
+  .navBarContainer .left {
+    display: flex;
+    align-items: center;
+  }
+
+  .navBarContainer .navFlex .right {
+    margin: auto 1rem auto 5vw;
+  }
+}
+
+@media only screen and (max-width: 801px) {
+  .navBarContainer .navFlex {
+    flex-direction: column;
+  }
+
+  .navBarContainer .navFlex .right {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  .navBarContainer .left {
+    flex-direction: column;
+  }
+
+  .navBarContainer .left h1 {
+    font-size: 21px;
+  }
+
+  .navBarContainer .left img {
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .navBarContainer .navFlex .right img {
+    width: 29px;
+    height: 29px;
+  }
+
+  .navBarContainer .navFlex .right a,
+  .navBarContainer .navFlex .home a {
+    font-size: 21px;
+  }
+}
+
+@media only screen and (max-width: 487px) {
+  .navBarContainer {
+    padding: 1rem 2rem 1rem 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 449px) {
+  .navBarContainer {
+    padding: 1rem 0.5rem 1rem 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 419px) {
+  .navBarContainer .navFlex .right {
+    padding-left: 0;
+  }
+
+  .navBarContainer .navFlex .right img {
+    display: none;
+  }
+}
+
+/* Error Pages */
+
+.errTxt {
+  margin: 1rem;
+  float: left;
+}
+
+.errTxt p {
+  color: rgb(37, 37, 37);
+  font-size: 21px;
+}
+
+.errTxt b {
+  color: red;
+}
+
+.errTxt .errDescrip {
+  color: rgb(37, 37, 37);
+  margin-top: 1rem;
+  font-size: 19px;
+}
+
+/* Home Page */
+
+.homeContainer {
+  margin: 2rem 1rem auto 1rem;
+}
+
+.homeContainer .mongoHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 2.5rem;
+}
+
+.homeContainer .mongoHeader h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 26px;
+  margin-right: 0.5rem;
+  background: linear-gradient(#d3d3d3, rgb(39, 167, 112));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* Had to put this here because it tells me to "define the standard property 'backhround-clip for compatibility"? */
+  background-clip: text;
+}
+
+.homeContainer .monSearch {
+  display: flex;
+  justify-content: center;
+}
+
+.homeContainer .monSearch input {
+  border: 0;
+  margin: 1rem 0.5rem 1rem 0.5rem;
+  padding: 4px;
+  min-width: 8%;
+  font-size: 16px;
+  border-bottom: 2px solid rgb(39, 167, 112);
+  background: transparent;
+}
+
+.homeContainer .monSearch input:focus {
+  padding-bottom: 6px;
+  font-weight: 600;
+  border-width: 3px;
+  outline: none;
+  transition: all 0.3s ease 0s;
+  border-image: linear-gradient(135deg, #d3d3d3, rgb(39, 167, 112));
+  border-image-slice: 1;
+}
+
+/* .homeContainer form input::placeholder {
+  color: rgb(255, 255, 255, 0.68);
+} */
+
+.homeContainer .monSearch input:focus::placeholder {
+  background: linear-gradient(#d3d3d3, rgb(39, 167, 112));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.homeContainer .monSearch button {
+  width: 105px;
+  height: 40px;
+  margin-top: 4px;
+  border: none;
+  font-size: 1rem;
+  color: rgb(255, 255, 255, 0.9);
+  background-color: rgb(39, 167, 112);
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s ease 0s;
+}
+
+.homeContainer .monSearch button:hover {
+  background-color: rgb(25, 22, 84);
+  border: 4px solid;
+  border-image: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  border-image-slice: 1;
+  box-shadow: 0px 5px 28px 0px rgba(0, 0, 0, 0.35);
+}
+
+.moviesContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 40%);
+  grid-row-gap: 1.5rem;
+  position: relative;
+  left: 10%;
+  margin-top: 1.5rem;
+}
+
+.moviesContainer .movie {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.moviesContainer .movie a {
+  display: block;
+  padding: 0.44rem;
+
+  background-color: rgb(39, 167, 112);
+  color: rgb(255, 255, 255, 0.75);
+  text-decoration: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.35);
+  border: 2px solid rgb(255, 255, 255, 0.7);
+  border-radius: 1rem;
+}
+
+.moviesContainer .movie a:hover {
+  padding: 1rem;
+  border-radius: 2rem;
+  background-color: rgb(31, 119, 81);
+  color: rgb(255, 255, 255, 0.89);
+  border-color: rgb(255, 255, 255, 0.7);
+  transition: all 0.3s ease 0s;
+  /* transform: translateY(-2rem); */
+  box-shadow: 0px 5px 40px 0px rgba(0, 0, 0, 0.35);
+  /* margin-top: 3.5rem; */
+}
+
+.moviesContainer .movie a:active,
+.moviesContainer .movie a:visited {
+  background-color: rgb(31, 119, 81);
+}
+
+.movieExpand {
+  margin: 0.5rem auto 2rem 15%;
+}
+
+.movieExpand #monBtn {
+  text-decoration: none;
+  background-color: rgb(39, 167, 112);
+  color: rgb(255, 255, 255, 0.75);
+  font-size: 16px;
+  padding: 8px 18px;
+  border-bottom: 4.5px solid rgba(0, 0, 0, 0.35);
+  border-radius: 4px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.35);
+  transition: all 250ms ease-out;
+}
+
+.movieExpand #monBtn:hover {
+  background-color: rgb(31, 119, 81);
+  color: rgb(255, 255, 255, 0.89);
+}
+
+.movieExpand #monBtn:active {
+  background-color: rgb(31, 119, 81);
+  border-width: 2px;
+  position: relative;
+  top: 2px;
+}
+
+.homeContainer hr {
+  margin: auto 2rem auto 2rem;
+
+  height: 0px;
+  border: double 3px transparent;
+  border-radius: 16px;
+  background-image: linear-gradient(white, white),
+    linear-gradient(145deg, rgb(17, 95, 154), rgb(39, 167, 112));
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+/* Postgres Home Start */
+
+.homeContainer .postgresHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 2.5rem;
+  margin-top: 2rem;
+}
+
+.homeContainer .postgresHeader h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 26px;
+  margin-right: 0.5rem;
+  background: linear-gradient(rgb(34, 167, 240), rgb(17, 95, 154));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.homeContainer .gresSearch {
+  display: flex;
+  justify-content: center;
+}
+
+.homeContainer .gresSearch input {
+  border: 0;
+  margin: 1rem 0.5rem 1rem 0.5rem;
+  padding: 4px;
+  min-width: 8%;
+  font-size: 16px;
+  border-bottom: 2px solid rgb(17, 95, 154);
+  background: transparent;
+}
+
+.homeContainer .gresSearch input:focus {
+  padding-bottom: 6px;
+  font-weight: 600;
+  border-width: 3px;
+  outline: none;
+  transition: all 0.3s ease 0s;
+  border-image: linear-gradient(135deg, rgb(211, 211, 211), rgb(17, 95, 154));
+  border-image-slice: 1;
+}
+
+/* .homeContainer form input::placeholder {
+  color: rgb(255, 255, 255, 0.68);
+} */
+
+.homeContainer .gresSearch input:focus::placeholder {
+  background: linear-gradient(rgb(34, 167, 240), rgb(17, 95, 154));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.homeContainer .gresSearch button {
+  width: 105px;
+  height: 40px;
+  margin-top: 4px;
+  border: none;
+  font-size: 1rem;
+  color: rgb(255, 255, 255, 0.9);
+  background-color: rgb(17, 95, 154);
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s ease 0s;
+}
+
+.homeContainer .gresSearch button:hover {
+  background-color: rgb(25, 22, 84);
+  border: 3px solid;
+  border-image: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  border-image-slice: 1;
+  box-shadow: 0px 5px 28px 0px rgba(0, 0, 0, 0.35);
+}
+
+.filmsContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 40%);
+  grid-row-gap: 1.5rem;
+  position: relative;
+  left: 10%;
+  margin-top: 1.5rem;
+}
+
+.filmsContainer .film {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filmsContainer .film a {
+  display: block;
+  padding: 0.44rem;
+
+  background-color: rgb(17, 95, 154);
+  color: rgb(255, 255, 255, 0.75);
+  text-decoration: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.35);
+  border: 2px solid rgb(255, 255, 255, 0.7);
+  border-radius: 1rem;
+}
+
+.filmsContainer .film a:hover {
+  padding: 1rem;
+  border-radius: 2rem;
+  background-color: rgb(54, 141, 206);
+  color: rgb(255, 255, 255, 0.89);
+  text-decoration: none;
+  border-color: rgb(255, 255, 255, 0.7);
+  transition: all 0.3s ease 0s;
+  /* transform: translateY(-2rem); */
+  box-shadow: 0px 5px 40px 0px rgba(0, 0, 0, 0.35);
+  /* margin-top: 3.5rem; */
+}
+
+.filmsContainer .film a:active,
+.filmsContainer .film a:visited {
+  background-color: rgb(54, 141, 206);
+}
+
+.movieExpand #gresBtn {
+  text-decoration: none;
+  background-color: rgb(17, 95, 154);
+  color: rgb(255, 255, 255, 0.75);
+  font-size: 16px;
+  padding: 8px 18px;
+  border-bottom: 4.5px solid rgba(0, 0, 0, 0.35);
+  border-radius: 4px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.35);
+  transition: all 250ms ease-out;
+}
+
+.movieExpand #gresBtn:hover {
+  background-color: rgb(17, 95, 154);
+  color: rgb(255, 255, 255, 0.89);
+}
+
+.movieExpand #gresBtn:active {
+  background-color: rgb(17, 95, 154);
+  border-width: 2px;
+  position: relative;
+  top: 2px;
+}
+
+@media only screen and (max-width: 845px) {
+  .homeContainer .mongoHeader h2,
+  .homeContainer .mongoHeader img {
+    margin-bottom: 1rem;
+  }
+
+  .homeContainer .postgresHeader h2,
+  .homeContainer .postgresHeader img {
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 784px) {
+  .moviesContainer {
+    grid-template-columns: repeat(1, 1fr);
+    left: 0;
+  }
+
+  .filmsContainer {
+    grid-template-columns: repeat(1, 1fr);
+    left: 0;
+  }
+}
+
+@media only screen and (max-width: 435px) {
+  .homeContainer .mongoHeader h2,
+  .homeContainer .mongoHeader img {
+    font-size: 23px;
+  }
+
+  .homeContainer .postgresHeader h2,
+  .homeContainer .postgresHeader img {
+    font-size: 23px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .homeContainer .mongoHeader {
+    margin-left: 1rem;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .homeContainer .mongoHeader {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 354px) {
+  .homeContainer .mongoHeader h2,
+  .homeContainer .mongoHeader img {
+    font-size: 21px;
+  }
+
+  .homeContainer .postgresHeader h2,
+  .homeContainer .postgresHeader img {
+    font-size: 21px;
+  }
+
+  .homeContainer .mongoHeader img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .homeContainer .postgresHeader img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* MongoDb Details Page */
+
+.mongoLogo {
+  position: relative;
+  margin: 12px auto 6px 1rem;
+}
+
+.moviesDetailsContainer {
+  margin: auto 1rem auto 1rem;
+  height: 28.95rem;
+}
+
+.moviesDetailsContainer h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 26px;
+  margin-bottom: 0.7rem;
+  background: -webkit-linear-gradient(#d3d3d3, rgb(39, 167, 112));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.moviesDetailsContainer img {
+  border: 2px solid rgb(37, 37, 37);
+  width: 380px;
+  height: 415px;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.35);
+  float: left;
+}
+
+.moviesDetailsContainer .moviesDetails {
+  display: flex;
+  flex-direction: row;
+}
+
+.moviesDetailsContainer .moviesDetails .monSmallDetails {
+  width: 20%;
+  margin-left: 1rem;
+}
+
+.moviesDetailsContainer .moviesDetails .monSmallDetails h3 {
+  color: rgb(39, 167, 112);
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+}
+
+.moviesDetailsContainer .moviesDetails .monSmallDetails b {
+  color: rgb(37, 37, 37, 0.7);
+}
+
+.moviesDetailsContainer .moviesDetails .monSmallDetails p {
+  position: relative;
+  left: 6px;
+  color: rgb(115, 115, 115);
+  font-size: 16px;
+}
+
+.moviesDetailsContainer .moviesDetails .contributors {
+  width: 35%;
+  margin-left: 1rem;
+}
+
+.moviesDetailsContainer .moviesDetails .contributors h3 {
+  color: rgb(39, 167, 112);
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+}
+
+.moviesDetailsContainer .moviesDetails .contributors b {
+  position: relative;
+  left: 6px;
+  color: rgb(37, 37, 37, 0.7);
+}
+
+.moviesDetailsContainer .moviesDetails .contributors p {
+  position: relative;
+  left: 1rem;
+  color: rgb(115, 115, 115);
+}
+
+.moviesDetailsContainer .moviesDetails .rating {
+  width: 20%;
+  margin-left: 1rem;
+}
+
+.moviesDetailsContainer .moviesDetails .rating h3 {
+  color: rgb(39, 167, 112);
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  /* text-decoration: underline; */
+}
+
+.moviesDetailsContainer .moviesDetails .rating p {
+  position: relative;
+  left: 6px;
+  color: rgb(115, 115, 115);
+}
+
+.moviesDetailsContainer .TextArea textarea {
+  margin: 2rem auto auto 1.5rem;
+  padding: 0.5rem;
+  resize: none;
+  border: 2px solid rgb(37, 37, 37, 0.7);
+  border-radius: 6px;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.35);
+  background: transparent;
+}
+
+.moviesDetailsContainer .TextArea div {
+  display: flex;
+  flex-direction: column;
+}
+
+.moviesDetailsContainer .TextArea .txtBtn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.moviesDetailsContainer .TextArea button {
+  padding: 0.1rem;
+  margin: 0.5rem 0.5rem auto 1.5rem;
+  width: 4rem;
+  color: rgb(37, 37, 37, 0.7);
+  border: 1px solid rgb(37, 37, 37, 0.7);
+  border-radius: 4px;
+
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.35);
+}
+
+.moviesDetailsContainer .TextArea button:hover {
+  color: rgb(37, 37, 37, 0.88);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s ease 0s;
+}
+
+.moviesDetailsContainer .TextArea small {
+  color: rgb(39, 167, 112);
+}
+
+.monDescription {
+  position: relative;
+  width: 45%;
+  margin: 1rem 1rem 1rem 1rem;
+  line-height: 21px;
+}
+
+.monDescription h3 {
+  color: rgb(39, 167, 112);
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.monDescription p::first-letter {
+  color: rgb(37, 37, 37, 0.7);
+  font-family: "Oldenburg", cursive;
+  letter-spacing: 1px;
+  font-size: 30px;
+}
+
+.monDescription p {
+  position: relative;
+  left: 6px;
+
+  /* font-family: "Alegreya Sans", sans-serif; */
+  font-size: 18px;
+  color: rgb(115, 115, 115);
+}
+
+@media only screen and (max-width: 1588px) {
+  .monDescription {
+    width: 55%;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  .monDescription {
+    width: 65%;
+  }
+}
+
+@media only screen and (max-width: 1160px) {
+  .moviesDetailsContainer {
+    height: initial;
+  }
+
+  .moviesDetailsContainer .moviesDetails {
+    flex-direction: column;
+    row-gap: 0.5rem;
+  }
+
+  .monDescription {
+    margin-bottom: 2rem;
+  }
+
+  .moviesDetailsContainer .moviesDetails .monSmallDetails {
+    width: 75%;
+  }
+
+  .moviesDetailsContainer .moviesDetails .contributors {
+    width: 75%;
+  }
+
+  .moviesDetailsContainer .moviesDetails .rating {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 1070px) {
+  .monDescription {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 978px) {
+  .moviesDetailsContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .moviesDetailsContainer img {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 1158px) {
+  .mainFooter div {
+    position: relative;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .moviesDetailsContainer h2 {
+    width: 93vw;
+  }
+}
+
+@media only screen and (max-width: 790px) {
+  .monDescription {
+    width: fit-content;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .moviesDetailsContainer .TextArea textarea {
+    width: 82vw;
+  }
+}
+
+@media only screen and (max-width: 416px) {
+  .moviesDetailsContainer h2 {
+    font-size: 24px;
+  }
+
+  .moviesDetailsContainer img {
+    width: 90vw;
+  }
+}
+
+/* Postgres Details Page */
+
+.postgresLogo {
+  position: relative;
+  margin: 12px auto 6px 1rem;
+}
+
+.filmDetailsContainer {
+  margin: auto 1rem auto 1rem;
+  height: 28.95rem;
+}
+
+.filmDetailsContainer h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 26px;
+  margin-bottom: 0.7rem;
+  background: linear-gradient(rgb(34, 167, 240), rgb(17, 95, 154));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.filmDetailsContainer img {
+  border: 2px solid rgb(37, 37, 37);
+  width: 380px;
+  height: 415px;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.35);
+  float: left;
+}
+
+.filmDetailsContainer .filmDetails {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.filmDetailsContainer .filmDetails h3 {
+  color: rgb(54, 141, 206);
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+}
+
+.filmDetailsContainer .filmDetails .smallDetails b {
+  color: rgb(37, 37, 37, 0.7);
+}
+
+.filmDetailsContainer .filmDetails .smallDetails p {
+  position: relative;
+  left: 6px;
+  color: rgb(115, 115, 115);
+  font-size: 16px;
+}
+
+.filmDetailsContainer .filmDetails .smallDetails {
+  width: 20%;
+  margin-left: 1rem;
+}
+
+.filmDetailsContainer .filmDetails .actors {
+  width: 20%;
+  margin-left: 1rem;
+}
+
+.filmDetailsContainer .filmDetails .actors p {
+  position: relative;
+  left: 6px;
+  color: rgb(115, 115, 115);
+  font-size: 16px;
+}
+
+.filmDetailsContainer .TextArea textarea {
+  margin: 2rem auto auto 1.5rem;
+  padding: 0.5rem;
+  resize: none;
+  border: 2px solid rgb(37, 37, 37, 0.7);
+  border-radius: 6px;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.35);
+  background: transparent;
+}
+
+.filmDetailsContainer .TextArea div {
+  display: flex;
+  flex-direction: column;
+}
+
+.filmDetailsContainer .TextArea .txtBtn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.filmDetailsContainer .TextArea button {
+  padding: 0.1rem;
+  margin: 0.5rem 0.5rem auto 1.5rem;
+  width: 4rem;
+  color: rgb(37, 37, 37, 0.7);
+  border: 1px solid rgb(37, 37, 37, 0.7);
+  border-radius: 4px;
+
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.35);
+}
+
+.filmDetailsContainer .TextArea button:hover {
+  color: rgb(37, 37, 37, 0.88);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s ease 0s;
+}
+
+.filmDetailsContainer .TextArea small {
+  color: rgb(39, 167, 112);
+}
+
+.gresDescription {
+  position: relative;
+  width: 45%;
+  margin: 1rem 1rem 1rem 1rem;
+  line-height: 21px;
+}
+
+.gresDescription h3 {
+  color: rgb(54, 141, 206);
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.gresDescription p::first-letter {
+  color: rgb(37, 37, 37, 0.7);
+  font-family: "Oldenburg", cursive;
+  letter-spacing: 1px;
+  font-size: 30px;
+}
+
+.gresDescription p {
+  position: relative;
+  left: 6px;
+
+  /* font-family: "Alegreya Sans", sans-serif; */
+  font-size: 18px;
+  color: rgb(115, 115, 115);
+}
+
+@media only screen and (max-width: 1588px) {
+  .gresDescription {
+    width: 55%;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  .gresDescription {
+    width: 65%;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .filmDetailsContainer .filmDetails .smallDetails {
+    width: 35%;
+  }
+
+  .filmDetailsContainer .filmDetails .actors {
+    width: 35%;
+  }
+}
+
+@media only screen and (max-width: 1160px) {
+  /* .filmDetailsContainer {
+    height: initial;
+  } */
+
+  /* .filmDetailsContainer .filmDetails {
+    flex-direction: column;
+    row-gap: 0.5rem;
+  } */
+
+  /* .gresDescription {
+    margin-bottom: 2rem;
+  } */
+
+  /* .filmDetailsContainer .filmDetails .smallDetails {
+    width: 75%;
+  }
+
+  .filmDetailsContainer .filmDetails .actors {
+    width: 75%;
+  } */
+}
+
+@media only screen and (max-width: 1070px) {
+  .gresDescription {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 896px) {
+  .filmDetailsContainer {
+    display: flex;
+    flex-direction: column;
+    height: initial;
+  }
+
+  .filmDetailsContainer img {
+    margin-bottom: 0.5rem;
+  }
+
+  .filmDetailsContainer .filmDetails .smallDetails {
+    width: 75%;
+  }
+
+  .filmDetailsContainer .filmDetails .actors {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .filmDetailsContainer h2 {
+    width: 93vw;
+  }
+}
+
+@media only screen and (max-width: 790px) {
+  .gresDescription {
+    width: fit-content;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .filmDetailsContainer .TextArea textarea {
+    width: 82vw;
+  }
+}
+
+@media only screen and (max-width: 416px) {
+  .filmDetailsContainer h2 {
+    font-size: 24px;
+  }
+
+  .filmDetailsContainer img {
+    width: 90vw;
+  }
+}
+
+/* MongoDb Search Page */
+
+.searchMongoLogo {
+  display: flex;
+  justify-content: center;
+  margin: 14px 1rem auto 1rem;
+}
+
+.monSearchContainer {
+  margin: auto 1rem 1rem 1rem;
+}
+
+.monSearchContainer h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  margin-bottom: 1rem;
+  margin-left: 2.5rem;
+  background: -webkit-linear-gradient(#d3d3d3, rgb(39, 167, 112));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.monSearchContainer .searchGridContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 1.5rem;
+}
+
+.monSearchContainer .searchGridContainer .movieBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 0.7rem;
+
+  /* box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.35); */
+  /* border-bottom: 2px solid rgb(25, 22, 84); */
+  /* border-bottom: 2px solid rgb(115, 115, 115); */
+  padding: 0.5rem 0.5rem 1rem 0.5rem;
+}
+
+.monSearchContainer .searchGridContainer .movieBox img {
+  border: 2px solid rgb(255, 255, 255, 0.7);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.35);
+}
+
+/* .monSearchContainer .searchGridContainer .movieBox a {
+  background-color: rgb(39, 167, 112);
+  color: rgb(255, 255, 255, 0.75);
+  text-decoration: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.35);
+  border: 2px solid rgb(255, 255, 255, 0.7);
+  padding: 0.2rem;
+} */
+
+.monSearchContainer .searchGridContainer .movieBox a {
+  color: rgb(115, 115, 115);
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.monSearchContainer .searchGridContainer .movieBox a:active {
+  color: rgb(39, 167, 112);
+}
+
+.monSearchContainer .searchGridContainer .movieBox a:visited {
+  color: rgb(39, 167, 112);
+}
+
+@media only screen and (max-width: 1288px) {
+  .monSearchContainer .searchGridContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (max-width: 930px) {
+  .monSearchContainer .searchGridContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .searchMongoLogo {
+    justify-content: left;
+    margin-left: 2.5rem;
+    margin-bottom: 6px;
+  }
+
+  .monSearchContainer h2 {
+    margin-left: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 628px) {
+  .monSearchContainer .searchGridContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Postgres Search Page */
+
+.searchPostgresLogo {
+  display: flex;
+  justify-content: center;
+  margin: 14px 1rem auto 1rem;
+}
+
+.gresSearchContainer {
+  margin: auto 1rem 1rem 1rem;
+}
+
+.gresSearchContainer h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  margin-bottom: 1rem;
+  margin-left: 2.5rem;
+  background: linear-gradient(rgb(34, 167, 240), rgb(17, 95, 154));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gresSearchContainer .searchGridContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 1.5rem;
+}
+
+.gresSearchContainer .searchGridContainer .filmBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 0.7rem;
+
+  /* box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.35); */
+  /* border-bottom: 2px solid rgb(25, 22, 84); */
+  /* border-bottom: 2px solid rgb(115, 115, 115); */
+  padding: 0.5rem 0.5rem 1rem 0.5rem;
+}
+
+.gresSearchContainer .searchGridContainer .filmBox img {
+  border: 2px solid rgb(255, 255, 255, 0.7);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.35);
+}
+
+.gresSearchContainer .searchGridContainer .filmBox a {
+  color: rgb(115, 115, 115);
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.gresSearchContainer .searchGridContainer .filmBox a:active,
+.gresSearchContainer .searchGridContainer .filmBox a:visited {
+  color: rgb(54, 141, 206);
+}
+
+@media only screen and (max-width: 1288px) {
+  .gresSearchContainer .searchGridContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (max-width: 930px) {
+  .gresSearchContainer .searchGridContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .searchPostgresLogo {
+    justify-content: left;
+    margin-left: 2.5rem;
+    margin-bottom: 6px;
+  }
+
+  .gresSearchContainer h2 {
+    margin-left: 1.5rem;
+  }
+}
+@media only screen and (max-width: 628px) {
+  .gresSearchContainer .searchGridContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Login page/Register Page */
+
+.required {
+  color: #ff0000;
+  font-size: 1.2rem;
+}
+
+.loginContainer,
+.registerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.signUpInHeader {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.loginContainer form,
+.registerContainer form {
+  width: 360px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: rgb(37, 37, 37, 0.88);
+  padding: 24px 40px;
+  border: 2px solid black;
+  border-radius: 1rem;
+  row-gap: 12px;
+  background-color: rgb(67, 198, 172);
+  background-image: linear-gradient(
+    170deg,
+    rgb(67, 198, 172),
+    rgb(25, 22, 84) 200%
+  );
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.35);
+  margin: auto;
+  margin-top: 8vh;
+  margin-bottom: 2%;
+  display: grid;
+  columns: 2;
+}
+
+.registerContainer form {
+  row-gap: 8px;
+}
+
+.loginContainer input,
+.registerContainer input,
+.registerExtras input {
+  background-color: rgb(227, 227, 227);
+  width: 100%;
+  height: 25px;
+  padding: 4px;
+}
+
+.registerExtras {
+  padding: 2% 0 0 0;
+  display: flex;
+  flex-direction: row;
+  column-gap: 0.5rem;
+}
+
+.registerExtras label {
+  font-size: 1rem;
+}
+
+.loginContainer h5,
+.registerContainer h5 {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.loginContainer button,
+.registerContainer button {
+  margin: auto;
+  color: rgb(255, 255, 255, 0.8);
+  background-color: rgb(25, 22, 84);
+  border-radius: 2rem;
+  font-size: 1.2rem;
+  width: fit-content;
+  padding: 8px 16px;
+}
+
+.loginContainer button:hover,
+.registerContainer button:hover {
+  background-color: rgb(39, 32, 172);
+  color: rgb(255, 255, 255, 0.89);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+.authMessage {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #c20808;
+}
+
+.authSuccess {
+  text-align: center;
+  font-size: 1.6rem;
+  color: rgb(45, 210, 178);
+}
+
+@media only screen and (max-width: 700px) {
+  .loginContainer form,
+  .registerContainer form {
+    width: 36vw;
+    row-gap: 4px;
+    padding: 8px;
+  }
+  .signUpInHeader {
+    font-size: 1.2rem;
+  }
+  .loginContainer input,
+  .registerContainer input {
+    width: 100%;
+  }
+  .registerExtras {
+    flex-direction: column;
+  }
+  .registerContainer label,
+  .loginContainer label {
+    font-size: 0.8rem;
+  }
+  .registerContainer input {
+    height: 20px;
+  }
+  .loginContainer button,
+  .registerContainer button {
+    font-size: 0.8rem;
+  }
+  .loginContainer h3,
+  .registerContainer h3 {
+    margin: 2px 0;
+  }
+}
+/* Account Page */
+
+.topDivider {
+  margin: auto 2rem auto 2rem;
+}
+
+.profileBody hr {
+  border: 2px solid;
+  border-image: linear-gradient(145deg, rgb(17, 95, 154), rgb(39, 167, 112));
+  border-image-slice: 1;
+}
+
+.authHeader {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  margin: 2rem 1rem 1rem 2.5rem;
+  color: rgb(25, 22, 84);
+}
+
+.profileContainer,
+.reviewsContainer {
+  margin: 1rem 2rem;
+  padding: 2%;
+}
+.profileContainer {
+  display: flex;
+}
+
+.profileDetails {
+  display: flex;
+  justify-content: center;
+  margin: 2% 8% 0 2%;
+}
+
+.profileDetailsTable .profHeader {
+  color: rgb(37, 37, 37, 0.8);
+}
+
+.profileDetailsTable tr {
+  color: rgb(115, 115, 115);
+  height: 1.6rem;
+  font-weight: 700;
+}
+
+.profileDetailsTable b {
+  color: rgb(37, 37, 37, 0.8);
+}
+
+.profileDetailsTable td {
+  width: max-content;
+}
+
+.profileDetailsTable form {
+  margin-left: 0.5rem;
+}
+
+.profileDetailsTable form input {
+  padding: 3px;
+  background: transparent;
+}
+
+.profileButtons {
+  display: flex;
+  justify-content: center;
+}
+
+.profileButtons form {
+  padding: 2%;
+}
+
+.profileButtons form button {
+  background-color: rgb(25, 22, 84);
+  color: rgb(255, 255, 255, 0.8);
+  width: 10rem;
+  padding: 2%;
+}
+
+.profileFunctionsContainer {
+  margin: 3% 0 0 6%;
+}
+
+.profileAdditions form,
+.profileAdditions h4,
+.profileAdditions {
+  margin: 4% 0;
+  text-align: left;
+}
+
+.profileAdditions input {
+  padding: 3px;
+  background: transparent;
+}
+
+.profileFunctionsContainer button,
+.editAddBtn,
+.genreAddBtn,
+.getReviewsLink {
+  background-color: rgb(25, 22, 84);
+  color: rgb(255, 255, 255, 0.8);
+  padding: 0.2rem 0.5rem;
+}
+
+.profileFunctionsContainer label {
+  color: rgb(37, 37, 37, 0.8);
+}
+
+.profileFunctionsContainer h4 {
+  color: rgb(37, 37, 37, 0.8);
+}
+
+.profileButtons form button:hover,
+.profileFunctionsContainer button:hover,
+.editAddBtn:hover,
+.genreAddBtn:hover,
+.getReviewsLink:hover {
+  background-color: rgb(39, 32, 172);
+  color: rgb(255, 255, 255, 0.89);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+.profileImage img {
+  border: 2px solid rgb(39, 32, 172);
+  border-radius: 2rem;
+  height: 15vw;
+  margin-left: 10%;
+}
+.navProfileImage {
+  border-radius: 50%;
+}
+
+.profileFunctionsContainer {
+  display: block;
+  text-align: center;
+}
+
+@media only screen and (max-width: 640px) {
+  .profileContainer {
+    flex-direction: column;
+  }
+}
+
+/* My Reviews Page */
+
+.reviewsContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2%;
+}
+
+.reviewsContainer hr {
+  border: 2px solid;
+  border-image: linear-gradient(145deg, rgb(17, 95, 154), rgb(39, 167, 112));
+  border-image-slice: 1;
+}
+
+.reviewsContainer h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  margin-bottom: 1rem;
+  color: rgb(25, 22, 84);
+}
+
+.reviewList {
+  display: grid;
+  grid-auto-rows: min-content;
+  grid-template-columns: fit-content(40%);
+  column-gap: 16px;
+  width: 92vw;
+}
+.singleReview {
+  width: fit-content;
+  height: f;
+  margin: 1rem;
+  padding: 3% 4%;
+  color: rgb(255, 255, 255, 0.89);
+  background-image: linear-gradient(
+    170deg,
+    rgb(1, 16, 92),
+    rgb(162, 237, 204) 130%
+  );
+  box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.35);
+  border-radius: 2rem;
+}
+.singleReview p {
+  margin: 1rem 0;
+}
+
+.getReviewsLink {
+  font-size: 0.8rem;
+  margin-bottom: 2%;
+  text-decoration: none;
+  border: 1.6px gray outset;
+}
+
+.reviewsMessage {
+  margin-top: 2%;
+  color: #ff0000;
+}

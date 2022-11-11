@@ -1,0 +1,23 @@
+<nav class="navBarContainer">
+  <div class="left">
+    <img src="/film-icon.webp" alt="film-icon.webp" width="64px" height="64px" />
+    <h1>DatabaseGalore.com</h1>
+  </div>
+  <div class="navFlex">
+    <div class="home">
+      <a href="/">Home</a>
+    </div>
+    <div class="right">
+      <% if(profileIcon != null){ %>
+      <img src="<%= profileIcon %>" alt="user.webp" width="32px" height="32px" class="navProfileImage" />
+
+      <% } else { %>
+
+      <img src="/user.webp" alt="user.webp" width="32px" height="32px" />
+
+      <% } %>
+
+      <a href="/auth/profile">Account</a>
+    </div>
+  </div>
+</nav>
