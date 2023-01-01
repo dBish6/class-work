@@ -1,0 +1,245 @@
+/* Designer: David Bishop
+   Product Card
+*/
+
+.productGridContainer {
+  display: grid;
+  place-content: center;
+  grid-template-columns: repeat(2, 630px);
+  column-gap: 210px;
+  row-gap: 4rem;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  /* grid-template-rows: repeat(2, 316px); */
+}
+
+.productGridContainer .productContainer {
+  display: flex;
+  align-items: center;
+  background-color: var(--black700Main);
+  /* max-height: 316px; */
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  transition: 0.38s ease all;
+  box-shadow: 0px 2px 48px rgba(165, 156, 89, 0.5);
+}
+
+/* .productGridContainer .productContainer:hover {
+  transform: scale(1.1);
+} */
+
+.productGridContainer .productContainer .imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 261px;
+  height: 264px; */
+  float: left;
+  margin-right: 1.5rem;
+  border-radius: 1rem;
+  background-color: var(--primary500Main);
+}
+
+.productGridContainer .productContainer .imageContainer img {
+  max-width: 244px;
+  height: fit-content;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  background-color: white;
+  /* object-fit: contain; */
+}
+
+/* ... */
+
+.productGridContainer .productContainer .contentContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.productGridContainer .productContainer .contentContainer h2 {
+  font-family: "Raven Hell";
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 59px;
+  letter-spacing: 0.04em;
+  color: var(--wordsWhiteMain);
+  -webkit-text-stroke: 2px var(--primary500Main);
+}
+
+.productGridContainer .productContainer .contentContainer .fontSize {
+  font-size: 36px;
+}
+
+.productGridContainer .productContainer .contentContainer .description {
+  max-width: 291px;
+  max-height: 80px;
+  float: left;
+
+  color: var(--wordsWhiteMain);
+  /* white-space: nowrap; */
+  word-break: keep-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1rem;
+}
+
+.productGridContainer .productContainer .contentContainer svg {
+  font-size: 18px;
+  color: var(--primary500Main);
+  cursor: pointer;
+  transition: 0.38s ease;
+  margin-right: 2px;
+  margin-top: 0.1rem;
+}
+
+.productGridContainer .productContainer .contentContainer svg:hover {
+  font-size: 1.35rem;
+  color: var(--primary400);
+}
+
+.productGridContainer .productContainer .contentContainer .readMore {
+  display: none;
+}
+
+.productGridContainer
+  .productContainer
+  .contentContainer
+  svg:hover
+  + .readMore {
+  display: inline;
+  position: absolute;
+  /* top: 157px;
+  right: 600px; */
+  padding: 0.3rem;
+  opacity: 0.5;
+
+  font-size: 12px;
+  color: var(--wordsWhiteMain);
+  background-color: var(--black800);
+  border-radius: 0.5rem;
+}
+
+.productGridContainer .productContainer .contentContainer hr {
+  border: 1px solid rgba(187, 187, 187, 0.5);
+  border-radius: 100%;
+  margin: 0.3rem 0 0.5rem 0;
+}
+
+.productGridContainer
+  .productContainer
+  .contentContainer
+  .widthHeightContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.625rem;
+  padding: 6px 1rem 6px 1rem;
+  background-color: var(--black600);
+  border-radius: 0.5rem;
+}
+
+.productGridContainer
+  .productContainer
+  .contentContainer
+  .widthHeightContainer
+  p {
+  font-size: 16px;
+  color: var(--wordsWhiteMain);
+}
+
+.productGridContainer
+  .productContainer
+  .contentContainer
+  .widthHeightContainer
+  p
+  span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+}
+
+.productGridContainer
+  .productContainer
+  .contentContainer
+  .priceBuyNowContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0 0 12px;
+}
+
+.productGridContainer
+  .productContainer
+  .contentContainer
+  .priceBuyNowContainer
+  p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--wordsWhiteMain);
+  text-shadow: -1px 0 var(--primary500Main), 0 1px var(--primary500Main),
+    1px 0 var(--primary500Main), 0 -1px var(--primary500Main);
+}
+
+.productGridContainer
+  .productContainer
+  .contentContainer
+  .priceBuyNowContainer
+  button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  background-color: var(--secondary500Main);
+  color: var(--wordsWhiteMain);
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: 0.28s ease all;
+}
+
+.productGridContainer
+  .productContainer
+  .contentContainer
+  .priceBuyNowContainer
+  button:hover {
+  text-shadow: -2px 0px 2px rgba(0, 0, 0, 0.3);
+  background-color: var(--secondary400);
+  border: 1px solid var(--secondary400);
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
+}
+
+.productGridContainer
+  .productContainer
+  .contentContainer
+  .priceBuyNowContainer
+  button:active {
+  border-width: 2px;
+  position: relative;
+  top: 2px;
+}
+
+/* ... */
+
+@media only screen and (max-width: 1485px) {
+  .productGridContainer {
+    column-gap: 64px;
+  }
+}
+
+@media only screen and (max-width: 1334px) {
+  .productGridContainer {
+    grid-template-columns: 630px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .productContainer {
+    transform: scale(0.7);
+  }
+
+  .productGridContainer .productContainer:hover {
+    transform: scale(0.73);
+  }
+
+  .productGridContainer {
+    row-gap: 0;
+  }
+}

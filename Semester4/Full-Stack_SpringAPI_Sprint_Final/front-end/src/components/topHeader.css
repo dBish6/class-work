@@ -1,0 +1,114 @@
+/* Designer: David Bishop
+   Top Header
+*/
+
+.topHeaderContainer {
+  display: flex;
+  justify-content: center;
+
+  background-color: var(--black700Main);
+  border-bottom: 3px solid var(--primary500Main);
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.35);
+}
+
+.topHeaderContainer h1 {
+  font-family: "Aceking";
+  font-size: 68px;
+  line-height: 66px;
+  color: var(--primary500Main);
+  margin: 1rem 0.5rem 3rem 0;
+}
+
+.topHeaderContainer svg {
+  position: relative;
+  top: 63px;
+  font-size: 64px;
+  color: var(--primary500Main);
+  cursor: pointer;
+  transition: 0.7s ease;
+  z-index: 1;
+}
+
+.topHeaderContainer .expandLess {
+  transform: rotate(180deg) scaleX(-1);
+}
+
+.topHeaderContainer svg:hover {
+  color: var(--primary400);
+}
+
+.topHeaderContainer p {
+  display: none;
+}
+
+.topHeaderContainer svg:hover + p {
+  display: block;
+  position: absolute;
+  /* top: 157px;
+  right: 600px; */
+  padding: 0.3rem;
+  opacity: 0.5;
+
+  font-size: 12px;
+  color: var(--wordsWhiteMain);
+  background-color: var(--black800);
+  border-radius: 0.5rem;
+}
+
+.dropdownContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdownContainer .dropdown {
+  max-width: 732px;
+  background-color: var(--black700Main);
+  border-bottom-left-radius: 0.6rem;
+  border-bottom-right-radius: 0.6rem;
+  animation: fade 1.2s ease backwards;
+}
+
+.dropdownContainer .dropdown .dropdownContent {
+  margin: 1rem 2rem 1rem 2rem;
+}
+
+.dropdownContainer .dropdown .dropdownContent h3 {
+  font-family: "Raven Hell";
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 50px;
+  letter-spacing: 0.02em;
+  color: var(--wordsWhiteMain);
+  -webkit-text-stroke: 2px var(--primary500Main);
+  padding-left: 0.5rem;
+  border-left: 3px solid var(--primary500Main);
+}
+
+.dropdownContainer .dropdown .dropdownContent .description {
+  font-size: 15px;
+  color: var(--wordsWhiteMain);
+  padding: 1rem;
+}
+
+.dropdownContainer .dropdown .dropdownContent .sincerely {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dropdownContainer .dropdown .dropdownContent .sincerely p {
+  font-family: "Freehand", cursive;
+  font-size: 18px;
+  color: var(--redColour);
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

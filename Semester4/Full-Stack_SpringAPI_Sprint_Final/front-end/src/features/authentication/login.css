@@ -1,0 +1,232 @@
+/* Designer: David Bishop
+   Login
+*/
+
+.loginGridContainer {
+  display: grid;
+  place-items: center;
+  max-width: 100vw;
+  min-height: 100vh;
+}
+
+.loginFormContainer .imgContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.loginFormContainer img {
+  position: relative;
+  top: 2px;
+  width: 64px;
+  height: 72px;
+}
+
+/* #mask {
+  background-color: black;
+  opacity: 0.5;
+} */
+
+.loginFormContainer .loginForm {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 480px;
+  padding: 2rem 3rem 1rem 3rem;
+
+  background-color: var(--white200Main);
+  border: 1px solid var(--black700Main);
+  box-shadow: -4px 4px 6px 3px rgba(0, 0, 0, 0.35);
+  /* FIXME: */
+  backdrop-filter: blur(2px);
+}
+
+.loginFormContainer .loginForm h1 {
+  font-family: "Raven Hell";
+  /* font-style: italic; */
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 60px;
+  color: #5c5c5c;
+}
+
+.loginFormContainer .loginForm .welcomeText {
+  font-size: 1rem;
+  color: var(--wordsBlackMain);
+  margin: 1.5rem 0 2rem 0;
+}
+
+.loginFormContainer .loginForm label {
+  position: relative;
+  bottom: 33px;
+  right: 140px;
+  pointer-events: none;
+  transition: 0.38s ease all;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: var(--wordsBlackMain);
+}
+
+.loginFormContainer .loginForm #LogUsernameLabel {
+  right: 140px;
+}
+
+.loginFormContainer .loginForm #LogPasswordLabel {
+  right: 143px;
+}
+
+/* Label focus */
+.loginFormContainer .loginForm input:focus + #LogUsernameLabel,
+.loginFormContainer .loginForm input:focus + #LogPasswordLabel,
+#usernameInput:not(:placeholder-shown) + #LogUsernameLabel,
+#passwordInput:not(:placeholder-shown) + #LogPasswordLabel {
+  bottom: 60px;
+  font-size: 14px;
+  background-color: var(--white200Main);
+  padding: 3px;
+}
+
+.loginFormContainer .loginForm input {
+  padding: 1rem 0.5rem 1rem 0.5rem;
+  width: 100%;
+  max-height: 48px;
+  outline: none;
+
+  font-size: 1rem;
+  color: var(--wordsBlackMain);
+  border: 1px solid var(--black700Main);
+  border-radius: 6px;
+  background-color: transparent;
+}
+
+.loginFormContainer .loginForm #passwordInput {
+  padding-right: 3.3rem;
+}
+
+.loginFormContainer .loginForm input:focus {
+  border-width: 2px;
+  border-color: var(--black500);
+  /* box-shadow: 0px 0px 12px rgb(136, 79, 85, 0.3); */
+}
+
+.loginFormContainer .loginForm .forgotPasswordText {
+  position: relative;
+  left: 100px;
+  top: 18px;
+  /* margin-top: 5px; */
+  cursor: pointer;
+
+  font-family: "Montserrat", sans-serif;
+  color: var(--wordsBlackMain);
+  text-decoration: underline;
+  text-decoration-color: var(--primary500Main);
+}
+
+.loginFormContainer .loginForm .forgotPasswordText:hover {
+  color: var(--black600);
+  text-decoration-color: var(--primary400);
+}
+
+.loginFormContainer .loginForm .visibilityIcon {
+  position: relative;
+  top: 39px;
+  left: 41.6%;
+
+  font-size: 28px;
+  color: var(--primary500Main);
+  cursor: pointer;
+}
+
+.loginFormContainer .loginForm button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--wordsBlackMain);
+  background-color: var(--white100);
+  border: 1px solid var(--black700Main);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.28s ease all;
+
+  width: 100%;
+  min-height: 48px;
+  margin-top: 13px;
+}
+
+.loginFormContainer .loginForm button:hover {
+  background-color: var(--white50);
+  border: 2px solid var(--black500);
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
+}
+
+.loginFormContainer .loginForm button:active {
+  border-width: 3px;
+  position: relative;
+  top: 2px;
+}
+
+.loginFormContainer .loginForm .contactSupport {
+  display: flex;
+  gap: 4px;
+  margin-top: 1.5rem;
+}
+
+.loginFormContainer .loginForm .contactSupport a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: var(--wordsBlackMain);
+  text-decoration: none;
+  transition: 0.3s ease all;
+}
+
+.loginFormContainer .loginForm .contactSupport a:hover {
+  color: var(--black600);
+  text-shadow: -2px 0px 2px rgba(0, 0, 0, 0.3);
+}
+
+.loginFormContainer .loginForm .contactSupport svg {
+  font-size: 1.5rem;
+  color: var(--primary500Main);
+}
+
+.loginFormContainer .loginForm .noAccount {
+  font-size: 1rem;
+  color: var(--wordsBlackMain);
+  margin: 1rem 0 3.5rem 0;
+}
+
+.loginFormContainer .loginForm .noAccount a {
+  font-size: 1rem;
+  color: var(--wordsBlackMain);
+  text-decoration: underline;
+  text-decoration-color: var(--primary500Main);
+}
+
+.loginFormContainer .loginForm .noAccount a:hover {
+  color: var(--black600);
+  text-decoration-color: var(--primary400);
+}
+
+.loginFormContainer .loginForm .otherDetails a {
+  font-size: 1rem;
+  color: var(--wordsBlackMain);
+  text-decoration: underline;
+  text-decoration-color: var(--primary500Main);
+}
+
+.loginFormContainer .loginForm .otherDetails a:hover {
+  color: var(--black600);
+  text-decoration-color: var(--primary400);
+}
+
+.loginFormContainer .loginForm .inputError {
+  position: relative;
+  bottom: 11px;
+  color: var(--redColour);
+}
+
+.loginFormContainer .loginForm .userNotFoundErr {
+  bottom: 12px;
+  color: var(--redColour);
+  margin-bottom: 0.5rem;
+}

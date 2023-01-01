@@ -1,0 +1,183 @@
+/* Designer: David Bishop
+   Models
+*/
+
+/* Globals */
+.darkBG {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.closeBtn {
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 18px;
+  color: var(--wordsBlackMain);
+  background-color: var(--white200Main);
+  transition: all 0.28s ease;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: -10px;
+  margin-right: -9px;
+}
+
+.closeBtn:hover {
+  background-color: var(--white300);
+}
+
+.modalHeader {
+  background-color: var(--black700Main);
+
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.modalHeader h3 {
+  /* margin: 0.5rem; */
+  padding: 1rem;
+
+  color: var(--wordsWhiteMain);
+  font-family: "Raven Hell";
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  -webkit-text-stroke: 1px var(--primary500Main);
+}
+
+/* <======================================/ Password Modal Start \======================================> */
+
+.adminBtn {
+  color: var(--wordsBlackMain);
+  font-size: 18px;
+  background: none;
+  cursor: pointer;
+  margin-right: 3rem;
+}
+
+.passwordModal {
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+
+  background: var(--white200Main);
+  border: 1px solid var(--primary500Main);
+  border-radius: 16px;
+  box-shadow: 0px 6px 20px rgb(0, 0, 0, 0.6);
+}
+
+.passwordModal form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.passwordModal form label {
+  position: absolute;
+  left: 44px;
+  top: 106px;
+  pointer-events: none;
+  transition: 0.38s ease all;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--black500);
+}
+
+/* Label Animation */
+.passwordModal form input:focus ~ label,
+/* Placeholder trick: when the placeholder is not shown 
+keep the label up for when there is text in the input. */
+.passwordModal form input:not(:placeholder-shown) ~ label {
+  position: absolute;
+  left: 44px;
+  top: 85px;
+  color: var(--black600);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.passwordModal form input {
+  color: var(--wordsBlackMain);
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+
+  height: 42px;
+  max-width: 70%;
+  padding: 0.5rem;
+  margin-top: 1.5rem;
+  border-bottom: 2px solid var(--black700Main);
+  background: transparent;
+  transition: 0.38s ease all;
+}
+
+.passwordModal form input:focus {
+  border-width: 3px;
+  outline: none;
+  border-image: linear-gradient(155deg, var(--black800), var(--primary500Main));
+  border-image-slice: 1;
+}
+
+.passwordModal .btnContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.passwordModal .btnContainer button {
+  font-family: "Montserrat", sans-serif;
+  color: var(--wordsBlackMain);
+  padding: 0.5rem;
+  margin: 1rem 0 1rem 0;
+  background-color: var(--primary500Main);
+  border: 1px solid var(--black700Main);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.35);
+  transition: 0.28s ease all;
+}
+
+.passwordModal .btnContainer button:hover {
+  background-color: var(--successColour);
+}
+
+.passwordModal .ifAdmin p {
+  font-size: 18px;
+  color: var(--wordsBlackMain);
+  margin: 1rem 0.5rem 0 0.5rem;
+}
+
+/* <======================================/ Read More Modal Start \======================================> */
+
+.readMoreModal {
+  display: flex;
+  flex-direction: column;
+  max-width: 420px;
+
+  background: var(--white200Main);
+  border: 1px solid var(--primary500Main);
+  border-radius: 16px;
+  box-shadow: 0px 6px 20px rgb(0, 0, 0, 0.6);
+}
+
+.readMoreModal .descriptionContainer {
+  padding: 1rem;
+  color: var(--wordsBlackMain);
+}

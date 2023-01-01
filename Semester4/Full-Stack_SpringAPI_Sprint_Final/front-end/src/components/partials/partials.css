@@ -1,0 +1,200 @@
+/* Designer: David Bishop
+  <==========================================/ Navigation Start \==========================================>
+*/
+
+.navContainer {
+  /* display: flex; */
+  min-height: 76px;
+}
+
+.navContainer .logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  float: left;
+  margin: 1rem 0.5rem 0 0.5rem;
+}
+
+.navContainer .logoContainer img {
+  width: 38px;
+  height: 43px;
+}
+
+.navContainer .logoContainer div {
+  position: relative;
+  top: 3px;
+}
+
+.navContainer .logoContainer div p:first-child {
+  font-family: "Forsaken";
+  font-size: 21px;
+  line-height: 24px;
+  cursor: default;
+}
+
+.navContainer .logoContainer div p {
+  font-family: "Forsaken";
+  font-size: 12px;
+  cursor: default;
+}
+
+/* ... */
+
+.barsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.barsContainer .topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 2.375rem;
+}
+
+.barsContainer .topBar a {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+
+  color: var(--wordsBlackMain);
+  font-size: 18px;
+  text-decoration: none;
+}
+
+/* Event */
+.barsContainer .topBar .activateLink {
+  background-color: var(--black700Main);
+  color: var(--wordsWhiteMain);
+}
+
+.barsContainer .topBarRight {
+  display: flex;
+  align-items: center;
+  margin-right: 24px;
+}
+
+.barsContainer .topBarRight a {
+  padding: 0.5rem;
+}
+
+/* ... */
+
+.barsContainer .bottomBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 2.375rem;
+  background-color: var(--black700Main);
+}
+
+.barsContainer .bottomBar a {
+  /* display: flex; */
+  padding: 0.5rem 1rem 0.5rem 1rem;
+
+  color: var(--wordsWhiteMain);
+  font-size: 16px;
+  text-decoration: none;
+}
+
+/* Event */
+.barsContainer .bottomBar .activeLink {
+  color: var(--activeColour);
+  text-decoration: underline;
+}
+
+.barsContainer .bottomBarRight {
+  display: flex;
+  gap: 82px;
+}
+
+.barsContainer .bottomBarRight input {
+  width: 150px;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  min-height: 24px;
+  background-color: var(--black300);
+  border: 1px solid var(--primary500Main);
+  border-radius: 4px;
+  outline: none;
+}
+
+.barsContainer .bottomBarRight .cartIconContainer {
+  margin-right: 2.625rem;
+}
+
+.barsContainer .bottomBarRight .cartIconContainerIfCartItem {
+  margin-right: 2.3rem;
+}
+
+.barsContainer .bottomBarRight .cartIconContainer svg {
+  color: var(--primary500Main);
+  cursor: pointer;
+  transition: 0.3s ease all;
+}
+
+.barsContainer .bottomBarRight .cartIconContainer svg:hover {
+  color: var(--primary400);
+  cursor: pointer;
+}
+
+.barsContainer .bottomBarRight .cartIconContainer small {
+  font-family: "Montserrat", sans-serif;
+  font-size: 8px;
+  color: var(--wordsWhiteMain);
+  background-color: rgb(187, 42, 57);
+  border-radius: 100%;
+
+  position: relative;
+  right: 6px;
+  bottom: 15px;
+  padding: 4px;
+}
+
+@media only screen and (max-width: 858px) {
+  .barsContainer .bottomBar {
+    flex-direction: row;
+  }
+
+  .barsContainer .bottomBar div:first-of-type {
+    margin-left: 0.5rem;
+  }
+}
+
+/* <==========================================/ Footer Start \==========================================> */
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--black700Main);
+  border-top: 3px solid var(--primary500Main);
+  padding: 1rem 0.5rem 1rem 0.5rem;
+}
+
+footer .columnContainer {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+footer div {
+  color: var(--primary400);
+}
+
+footer a {
+  color: var(--black300);
+  text-decoration-color: var(--primary500Main);
+}
+
+footer a:hover {
+  color: var(--black200);
+  text-decoration-color: var(--primary400);
+}
+
+footer .thankYouNote {
+  text-align: center;
+}
+
+footer .thankYouNote p {
+  color: var(--black300);
+}

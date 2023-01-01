@@ -1,0 +1,122 @@
+/* Font Imports */
+@font-face {
+  font-family: "Aceking";
+  src: url(./assets/fonts/Aceking.ttf);
+}
+
+@font-face {
+  font-family: "Forsaken";
+  src: url(./assets/fonts/Forsaken.ttf);
+}
+
+@font-face {
+  font-family: "RavenHell";
+  src: url(./assets/fonts/RavenHell-ThinGothic.ttf);
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "RavenHell";
+  src: url(./assets/fonts/RavenHell-LightGothic.ttf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "RavenHell";
+  src: url(./assets/fonts/RavenHell-RegularGothic.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "RavenHell";
+  src: url(./assets/fonts/RavenHell-MediumGothic.ttf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "RavenHell";
+  src: url(./assets/fonts/RavenHell-BoldGothic.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "RavenHell";
+  src: url(./assets/fonts/RavenHell-BlackGothic.ttf);
+  font-weight: 800;
+}
+
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Freehand&family=Montaga&family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+html {
+  background-color: var(--backgroundColour);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+* {
+  font-family: "Montaga", serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.Toastify__toast-body > div:last-child {
+  font-family: "Montserrat", sans-serif;
+}
+
+.Toastify__toast-theme--dark {
+  background-color: var(--black800) !important;
+  color: var(--wordsWhiteMain) !important;
+}
+
+:root {
+  --backgroundColour: #bbbbbb;
+
+  /* Primary Colour */
+  --primary300: #cdc9a9;
+  --primary400: #bcb78c;
+  --primary500Main: #a69f66;
+  --primary600: #908954;
+  --primary700: #7a7447;
+
+  /* Secondary Accent */
+  --secondary300: #c2969b;
+  --secondary400: #ae7379;
+  --secondary500Main: #884f55;
+  --secondary600: #744348;
+  --secondary700: #62393d;
+
+  /* Whites */
+  --white50: #f8f8f8;
+  --white100: #f2f2f2;
+  --white200Main: #ececec;
+  --white300: #dedede;
+
+  /* Blacks */
+  --black200: #bbbbbb;
+  --black300: #adadad;
+  --black400: #8b8b8b;
+  --black500: #6f6f6f;
+  --black600: #494949;
+  --black700Main: #363636;
+  --black800: #1b1b1b;
+
+  /* Words Colour */
+  --wordsBlackMain: #2b2b2b;
+  --wordsWhiteMain: #eaeaea;
+
+  --yellowColour: #e3d763;
+  --redColour: #b23542;
+  --successColour: #6da666;
+  --activeColour: #c6cbde;
+}

@@ -1,0 +1,367 @@
+/* Designer: David Bishop
+   Shopping Cart
+*/
+
+/* <=======================================/ Shopping Cart Start \=======================================> */
+
+.cartGridContainer {
+  display: grid;
+  grid-template-columns: minmax(250px, 80%) 1fr;
+}
+
+.cartContainer {
+  padding: 1.5rem 3rem;
+}
+
+.cartContainer .titles {
+  margin-bottom: 0.5rem;
+}
+
+.cartContainer .titles,
+.cartItem {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 0.5rem;
+}
+
+.cartContainer .titles h3 {
+  font-family: "Raven Hell";
+  font-weight: 500;
+  font-size: 18px;
+  /* text-transform: uppercase; */
+  color: var(--wordsBlackMain);
+  /* color: #5c5c5c; */
+  /* -webkit-text-stroke: 1px var(--primary500Main); */
+  justify-self: center;
+  padding: 0 0.5rem;
+}
+
+.cartContainer .cartItem {
+  /* background-color: var(--black400); */
+  border-top: 1px solid var(--black500);
+  padding: 1rem 0;
+}
+
+.cartContainer .cartItem .cartImageContainer {
+  margin-left: 0.5rem;
+  justify-self: center;
+}
+
+.cartContainer .cartItem .cartImageContainer img {
+  max-width: 130px;
+}
+
+.cartContainer .cartItem h4 {
+  color: var(--wordsBlackMain);
+  justify-self: center;
+}
+
+.cartContainer .cartItem .length {
+  padding: 0 0.7rem;
+}
+
+.cartContainer .cartItem .mass {
+  padding: 0.7rem;
+}
+
+.cartContainer .cartItem .quantityContainer {
+  display: flex;
+  align-content: center;
+  justify-self: center;
+
+  /* border: 1px solid var(--black600); */
+  padding: 0.5rem;
+  /* max-width: 4rem; */
+}
+
+.cartContainer .cartItem .quantityContainer svg {
+  font-size: 21px;
+  color: var(--primary500Main);
+  background-color: var(--black700Main);
+  border-radius: 100%;
+}
+
+.cartContainer .cartItem .quantityContainer p {
+  font-size: 18px;
+  padding: 0 0.5rem;
+}
+
+.cartContainer .cartItem .trashIcon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cartContainer .cartItem .trashIcon svg {
+  color: var(--redColour);
+  font-size: 36px;
+}
+
+.cartContainer .cartItem .trashIcon small {
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  color: var(--wordsBlackMain);
+}
+
+.cartContainer .clearBtn {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--wordsWhiteMain);
+  background-color: var(--black700Main);
+  border: 1px solid var(--primary500Main);
+  border-radius: 6px;
+  transition: 0.28s ease all;
+
+  max-width: 7rem;
+  padding: 0.5rem;
+  margin-top: 13px;
+}
+
+.cartContainer .clearBtn:hover {
+  background-color: var(--black600);
+  border: 2px solid var(--primary500Main);
+  color: var(--white200Main);
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
+}
+
+.cartContainer .clearBtn:active {
+  border-width: 3px;
+  position: relative;
+  top: 2px;
+}
+
+.cartContainer hr {
+  border-top: 1px solid var(--black500);
+  width: 100%;
+}
+
+@media only screen and (max-width: 1730px) {
+  .cartContainer .cartItem .trashIcon {
+    left: 40px;
+  }
+}
+
+@media only screen and (max-width: 1635px) {
+  .cartContainer .cartItem .trashIcon {
+    left: 30px;
+  }
+}
+
+@media only screen and (max-width: 1455px) {
+  .cartContainer .cartItem .trashIcon {
+    left: 20px;
+  }
+}
+
+@media only screen and (max-width: 1245px) {
+  .cartContainer .cartItem .trashIcon {
+    left: 10px;
+  }
+}
+
+@media only screen and (max-width: 562px) {
+  .cartContainer .titles,
+  .cartItem {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .lengthTitle,
+  .massTitle,
+  .length,
+  .mass {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 402px) {
+  .cartContainer .cartItem .cartImageContainer {
+    display: none;
+  }
+  .cartContainer .titles,
+  .cartItem {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .productTitle {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1214px) {
+  .cartGridContainer {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* <====================================/ Checkout Box Start \====================================> */
+
+.cartGridContainer .checkoutContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cartGridContainer .checkoutContainer .checkoutBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 1rem;
+
+  color: var(--wordsWhiteMain);
+  background-color: var(--black700Main);
+  border: 2px solid var(--primary500Main);
+  border-radius: 6px;
+}
+
+.cartGridContainer .checkoutContainer .checkoutBox {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: var(--wordsWhiteMain);
+}
+
+.cartGridContainer .checkoutContainer .checkoutBox h3 {
+  font-size: 18px;
+  color: var(--wordsWhiteMain);
+}
+
+.cartGridContainer .checkoutContainer .checkoutBox span {
+  font-family: "Montserrat", sans-serif;
+}
+
+.cartGridContainer .checkoutContainer .checkoutBox button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  background-color: var(--primary500Main);
+  border-radius: 6px;
+  color: var(--wordsBlackMain);
+  cursor: pointer;
+
+  padding: 0.4rem;
+  margin: 1rem 0 0.5rem 0;
+  width: 100%;
+}
+
+.cartGridContainer .checkoutContainer .checkoutBox button:hover {
+  background-color: var(--primary400);
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
+}
+
+.cartGridContainer .checkoutContainer .checkoutBox button:active {
+  border: 1px solid var(--primary400);
+  position: relative;
+  top: 2px;
+}
+
+.cartGridContainer .checkoutContainer .checkoutBox a {
+  display: flex;
+  font-size: 16px;
+  text-decoration-color: var(--primary500Main);
+}
+
+.cartGridContainer .checkoutContainer .checkoutBox p {
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  color: var(--primary500Main);
+  transition: 0.28s ease all;
+}
+
+.cartGridContainer .checkoutContainer .checkoutBox svg {
+  color: var(--primary500Main);
+  transition: 0.28s ease all;
+}
+
+.cartGridContainer .checkoutContainer .checkoutBox a:hover {
+  text-decoration-color: var(--primary400);
+}
+
+.cartGridContainer .checkoutContainer .checkoutBox p:hover {
+  color: var(--primary400);
+}
+
+.cartGridContainer .checkoutContainer .checkoutBox svg:hover {
+  color: var(--primary400);
+}
+
+/* <===================================/ Order Page Start \===================================> */
+
+.orderContainer,
+.noItemsContainer {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.orderContainer div,
+.noItemsContainer div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.orderContainer h2,
+.noItemsContainer h2 {
+  font-family: "Raven Hell";
+  font-weight: 500;
+  font-size: 38px;
+  letter-spacing: 0.02em;
+  color: var(--wordsBlackMain);
+  -webkit-text-stroke: 1px var(--secondary500Main);
+  text-align: center;
+}
+
+.orderContainer .arriveTxt {
+  font-size: 18px;
+  color: var(--wordsBlackMain);
+  margin-top: 1rem;
+}
+
+.orderContainer span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--redColour);
+}
+
+.orderContainer a,
+.noItemsContainer a {
+  display: flex;
+  font-size: 16px;
+  text-decoration-color: var(--wordsBlackMain);
+  margin-top: 0.5rem;
+}
+
+.orderContainer a p,
+.noItemsContainer a p {
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  color: var(--wordsBlackMain);
+  transition: 0.28s ease all;
+}
+
+.orderContainer a svg,
+.noItemsContainer a svg {
+  color: var(--wordsBlackMain);
+  transition: 0.28s ease all;
+}
+
+.orderContainer a:hover,
+.noItemsContainer a:hover {
+  text-decoration-color: var(--secondary500Main);
+}
+
+.orderContainer a p:hover,
+.noItemsContainer a p:hover {
+  color: var(--secondary500Main);
+}
+
+.orderContainer a svg:hover,
+.noItemsContainer a svg:hover {
+  color: var(--secondary500Main);
+}

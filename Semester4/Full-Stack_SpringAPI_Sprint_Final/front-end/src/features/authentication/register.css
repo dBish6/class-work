@@ -1,0 +1,298 @@
+/* Designer: David Bishop
+   Register
+*/
+
+.regGridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(458px, 1fr));
+  max-width: 100vw;
+  min-height: 100vh;
+}
+
+.topSpan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 1.5rem 0 1rem;
+}
+
+.topSpan .logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.topSpan .logoContainer img {
+  width: 38px;
+  height: 43px;
+}
+
+.topSpan .logoContainer div {
+  position: relative;
+  top: 3px;
+}
+
+.topSpan .logoContainer div p:first-child {
+  font-family: "Forsaken";
+  font-size: 21px;
+  line-height: 24px;
+  cursor: default;
+}
+
+.topSpan .logoContainer div p {
+  font-family: "Forsaken";
+  font-size: 12px;
+  cursor: default;
+}
+
+.topSpan a {
+  font-family: "Montserrat", sans-serif;
+  color: var(--wordsBlackMain);
+  text-decoration: underline;
+  text-decoration-color: var(--primary500Main);
+}
+
+.topSpan a:hover {
+  color: var(--black600);
+}
+
+/* ... */
+
+.registerForm {
+  display: grid;
+  place-content: center;
+  /* min-height: 50%; */
+}
+
+.registerForm h1 {
+  font-family: "Raven Hell";
+  font-weight: 600;
+  font-size: 48px;
+  color: var(--secondary500Main);
+  -webkit-text-stroke: 2px var(--wordsBlackMain);
+  margin-bottom: 1rem;
+}
+
+.registerForm .formMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.registerForm .formMain label {
+  position: relative;
+  bottom: 33px;
+  pointer-events: none;
+  transition: 0.38s ease all;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--wordsBlackMain);
+}
+
+.registerForm .formMain .required {
+  color: var(--redColour);
+}
+
+.registerForm .formMain #usernameLabel {
+  right: 144px;
+}
+
+.registerForm .formMain #emailLabel {
+  right: 162px;
+}
+
+.registerForm .formMain #passwordLabel {
+  right: 146px;
+}
+
+.registerForm .formMain #phoneLabel {
+  right: 158px;
+}
+
+/* Label focus */
+.registerForm .formMain input:focus + #usernameLabel,
+.registerForm .formMain input:focus + #emailLabel,
+.registerForm .formMain input:focus + #passwordLabel,
+.registerForm .formMain input:focus + #phoneLabel,
+.registerForm .formMain input:not(:placeholder-shown) + #usernameLabel,
+.registerForm .formMain input:not(:placeholder-shown) + #emailLabel,
+.registerForm .formMain input:not(:placeholder-shown) + #passwordLabel,
+.registerForm .formMain input:not(:placeholder-shown) + #phoneLabel {
+  bottom: 55px;
+  font-size: 14px;
+}
+
+.registerForm .formMain input {
+  color: var(--wordsBlackMain);
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+
+  margin: 1rem 0 3px 0;
+  height: 42px;
+  width: 384px;
+  padding: 0.5rem;
+  border-bottom: 2px solid var(--black700Main);
+  background: transparent;
+  transition: 0.38s ease all;
+}
+
+.registerForm .formMain input:focus {
+  outline: none;
+  border-width: 3px;
+}
+
+.registerForm .formMain p {
+  max-width: 361px;
+  text-align: center;
+  margin: 1.5rem 0 1rem 0;
+}
+
+.registerForm .formMain button {
+  font-family: "Raven Hell";
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--secondary500Main);
+  background-color: var(--white300);
+  border: 2px solid var(--secondary500Main);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.28s ease all;
+
+  width: 384px;
+  height: 48px;
+}
+
+.registerForm .formMain button:hover {
+  color: var(--secondary400);
+  background-color: var(--white200Main);
+  border: 2px solid var(--secondary400);
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
+}
+
+.registerForm .formMain button:active {
+  border-width: 3px;
+  position: relative;
+  top: 2px;
+}
+
+.registerForm .formMain .ageText {
+  margin-top: 1rem;
+  font-size: 12px;
+  color: var(--black600);
+}
+
+.registerForm .formMain .inputError {
+  position: relative;
+  bottom: 11px;
+  color: var(--redColour);
+}
+
+.registerForm .formMain .userConflictErr {
+  color: var(--redColour);
+}
+
+/* ... */
+
+.rightSide {
+  display: grid;
+  place-items: center;
+  background-color: var(--secondary500Main);
+  box-shadow: -6px 0px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  padding: 1rem;
+}
+
+.rightSide img {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  max-width: 541px;
+  min-height: 875px;
+  z-index: -1;
+  overflow: hidden;
+
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.welcomePoints h1 {
+  font-family: "Raven Hell";
+  font-weight: 500;
+  font-size: 38px;
+  /* letter-spacing: 0.02em; */
+  /* line-height: 61px; */
+  color: var(--wordsWhiteMain);
+  -webkit-text-stroke: 1px var(--primary500Main);
+  border-bottom: 2px solid var(--primary500Main);
+  text-shadow: -6px 6px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.welcomePoints ul {
+  margin-top: 1rem;
+}
+
+.welcomePoints ul li {
+  color: var(--wordsWhiteMain);
+  font-size: 18px;
+
+  margin-left: 1.5rem;
+}
+
+.ratingsContainer {
+  display: flex;
+  gap: 82px;
+}
+
+.ratingsContainer div {
+  max-width: 190px;
+}
+
+.ratingsContainer h4 {
+  font-family: "Raven Hell";
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  -webkit-text-stroke: 1px var(--primary500Main);
+  font-size: 21px;
+  color: var(--wordsWhiteMain);
+  text-shadow: -6px 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.ratingsContainer p {
+  font-size: 1rem;
+  color: var(--white300);
+}
+
+.ratingsContainer .stars svg {
+  color: var(--yellowColour);
+}
+
+@media only screen and (max-width: 1249px) {
+  .ratingsContainer {
+    gap: 2rem;
+  }
+  .ratingsContainer div {
+    max-width: 320px;
+  }
+}
+
+@media only screen and (max-width: 920px) {
+  .rightSide img {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 915px) {
+  .welcomePoints ul {
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .ratingsContainer {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+}
