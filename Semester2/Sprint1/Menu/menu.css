@@ -1,0 +1,334 @@
+html {
+  background-image: url("/pictures/hans-vivek-unsplash.avif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #00009133;
+  color: white;
+  margin: 0px;
+}
+
+main {
+  font-family: "Sunflower", sans-serif;
+  height: auto;
+  padding: 16px;
+  min-height: 888px;
+  margin: auto 15%;
+  margin-bottom: 8px;
+  background: #0e0d0d50;
+  backdrop-filter: blur(8px);
+  border: 6px solid #3a7cde;
+  border-radius: 8px;
+}
+
+/* Header Info - Several Nested Flex Boxes */
+header {
+  height: 104px;
+  top: 0px;
+  margin: 0px 18% 16px 18%;
+  background: #3a7cde;
+  border-radius: 0px 0px 8px 8px;
+}
+
+#header-container {
+  display: flex;
+  justify-content: space-between;
+  height: 104px;
+  align-items: center;
+}
+
+#header-left,
+#header-right {
+  display: flex;
+}
+
+/* Header Left Side (Logo) */
+
+#header-container a {
+  text-decoration: none;
+}
+
+#text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#text-container h1,
+#text-container h2 {
+  margin: 0 0 0 24px;
+}
+
+#header-container img {
+  /* Blue Logo */
+  width: 72px;
+  height: 72px;
+  margin-left: 16px;
+}
+
+#logo-text-top {
+  font-family: "Pacifico", cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 42px;
+  display: flex;
+  align-items: center;
+  color: #ffb800;
+}
+
+#logo-text-bottom {
+  font-family: "Combo", cursive;
+  padding: 6px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 31px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+/* Header Right Side (Buttons) */
+#header-right input {
+  transition: 0.2s;
+  background: #ffb800;
+  border: 3px solid black;
+  box-sizing: border-box;
+  border-radius: 8px;
+  height: 40px;
+  width: 120px;
+  cursor: pointer;
+  margin-right: 24px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  color: black;
+}
+
+#header-right input:hover {
+  transition: 0.2s;
+  background-color: rgba(0, 97, 0, 0.5);
+  color: white;
+}
+
+/* Nav Bar - Top of Main */
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 16px 18% 0px 18%;
+  height: 32px;
+  background-color: rgba(58, 124, 222, 1);
+  color: #ffb800;
+  font-weight: 400;
+}
+
+nav span a {
+  font-size: 18px;
+  color: #ffb800;
+  text-decoration: none;
+}
+
+nav span a:hover {
+  color: rgba(218, 42, 42, 0.75);
+  text-decoration: underline;
+}
+
+/* Menu Grid Controls */
+
+main {
+  display: grid;
+  grid-template-areas:
+    "picture1 logo picture2"
+    "mainMenu sides breakfastMenu"
+    ". drinks .";
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  grid-template-rows: 20% 40% 37%;
+  height: 100%;
+  text-align: center;
+}
+
+.menu-header img {
+  border: 2px solid gold;
+  border-radius: 8px;
+}
+
+/* Main Menu*/
+
+.menu-main {
+  grid-row: span 2;
+  margin-top: 32px;
+  display: flex;
+  height: auto;
+  width: auto;
+  background-color: rgba(50, 140, 224, 0.75);
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.menu-head {
+  background-color: rgba(220, 164, 20, 0.75);
+  text-align: center;
+  height: auto;
+  width: 100%;
+  border-top: 1px solid rgba(50, 140, 224);
+  border-bottom: 1px solid rgba(50, 140, 224);
+}
+
+.menu-head h2 {
+  margin: auto;
+  font-family: "Pacifico", cursive;
+  text-shadow: 2px 0 0 rgba(220, 164, 20), -2px 0 0 rgba(220, 164, 20),
+    0 2px 0 rgba(220, 164, 20), 0 -2px 0 rgba(220, 164, 20),
+    1px 1px rgba(220, 164, 20), -1px -1px 0 rgba(220, 164, 20),
+    1px -1px 0 rgba(220, 164, 20), -1px 1px 0 rgba(220, 164, 20);
+}
+
+.special,
+.drink-special {
+  text-align: center;
+  font-size: 0.75em;
+  margin: 16px 0px;
+}
+
+.menu-main h3 {
+  word-spacing: 2pt;
+}
+
+.menu-main h3,
+p {
+  margin: 4px 0px;
+}
+
+/* Side Dishes */
+
+.sides {
+  margin-top: 32px;
+  margin-left: 24px;
+  margin-right: 24px;
+  display: flex;
+  background-color: rgba(50, 140, 224, 0.75);
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  text-align: center;
+  width: auto;
+}
+
+.sides h3,
+p {
+  margin: 4px 0px;
+}
+
+/* Drink Menu */
+.drinks {
+  margin-left: 24px;
+  margin-right: 24px;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  height: 100%;
+  margin-top: 50px;
+  width: auto;
+}
+
+.drinks {
+  display: grid;
+  grid-template-areas:
+    "header . ."
+    ". special ."
+    "drink1 line drink2"
+    "drink3 line drink4"
+    "drink5 line drink6";
+  grid-template-columns: 49% 2% 49%;
+  grid-template-rows: 20% repeat(8, 10%);
+  background-color: rgba(50, 140, 224, 0.75);
+  height: auto;
+}
+
+.drink-head {
+  background-color: rgba(220, 164, 20, 0.75);
+  grid-column: 1/4;
+  text-align: center;
+  height: auto;
+  width: auto;
+  border-top: 1px solid rgba(50, 140, 224);
+  border-bottom: 1px solid rgba(50, 140, 224);
+}
+
+.drinks div h3 {
+  margin: 0;
+}
+
+.sides h2,
+.drinks h2 {
+  margin: auto;
+  font-family: "Pacifico", cursive;
+  text-shadow: 2px 0 0 rgba(220, 164, 20), -2px 0 0 rgba(220, 164, 20),
+    0 2px 0 rgba(220, 164, 20), 0 -2px 0 rgba(220, 164, 20),
+    1px 1px rgba(220, 164, 20), -1px -1px 0 rgba(220, 164, 20),
+    1px -1px 0 rgba(220, 164, 20), -1px 1px 0 rgba(220, 164, 20);
+}
+
+.sides h3,
+.drinks h3 {
+  word-spacing: 2pt;
+}
+
+.drink-special {
+  margin: 4px 0px 16px 0px;
+}
+
+/* Misc. */
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+.price {
+  font-size: 1.17em;
+  font-weight: bold;
+}
+
+.main-menu-item {
+  display: none;
+  text-align: left;
+  border-bottom: 2px dotted white;
+  border-left: 2px dotted white;
+  border-right: 2px dotted white;
+  width: 80%;
+  padding: 3px;
+}
+
+.vl {
+  border-left: 2px solid white;
+  height: auto;
+}
+
+/* Footer - much the same as nav */
+
+#footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0px 18% 0px 18%;
+  height: 24px;
+  background-color: rgba(58, 124, 222, 1);
+  color: #ffb800;
+  font-size: 8px;
+}

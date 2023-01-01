@@ -1,0 +1,368 @@
+@import url("https://fonts.googleapis.com/css2?family=Combo&family=Roboto:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+/* top, right, bottom, left */
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background: url("/pictures/background.avif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 560px;
+}
+
+main {
+  height: auto;
+  margin: auto 18%;
+  background: #ececec;
+  border: 2px solid #3a7cde;
+}
+
+section {
+  margin: 16px 16px 16px 16px;
+}
+
+/* Header Info - Several Nested Flex Boxes */
+header {
+  height: 104px;
+  top: 0px;
+  margin: 0px 18% 16px 18%;
+  background: #3a7cde;
+  border-radius: 0px 0px 8px 8px;
+}
+
+#page-container {
+  display: grid;
+}
+
+#header-container {
+  display: flex;
+  justify-content: space-between;
+  height: 104px;
+  align-items: center;
+}
+
+#header-left,
+#header-right {
+  display: flex;
+}
+
+/* Header Left Side (Logo) */
+
+#header-container a {
+  text-decoration: none;
+}
+
+#text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#text-container h1,
+#text-container h2 {
+  margin: 0 0 0 24px;
+}
+
+#header-container img {
+  /* Blue Logo */
+  width: 72px;
+  height: 72px;
+  margin-left: 16px;
+}
+
+#logo-text-top {
+  font-family: "Pacifico", cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 42px;
+  display: flex;
+  align-items: center;
+  color: #ffb800;
+}
+
+#logo-text-bottom {
+  font-family: "Combo", cursive;
+  padding-top: 6px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 31px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+/* Header Right Side (Buttons) */
+#header-right input {
+  transition: 0.2s;
+  background: #ffb800;
+  border: 3px solid black;
+  box-sizing: border-box;
+  border-radius: 8px;
+  height: 40px;
+  width: 120px;
+  cursor: pointer;
+  margin-right: 24px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  color: black;
+}
+
+#header-right input:hover {
+  transition: 0.2s;
+  background-color: rgba(0, 97, 0, 0.5);
+  color: white;
+}
+
+/* Nav Bar - Top of Main */
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 16px 18% 0px 18%;
+  height: 32px;
+  background-color: rgba(58, 124, 222, 1);
+  color: #ffb800;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+nav span a {
+  font-size: 18px;
+  color: #ffb800;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgba(218, 42, 42, 0.75);
+  text-decoration: underline;
+}
+
+/* Section 1 - Introduction */
+
+#section1 {
+  display: flex;
+  width: auto;
+  margin-top: 36px;
+  margin-bottom: 36px;
+}
+
+#section1 img {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  border: 2px solid #3a7cde;
+}
+
+#section1 #title1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#section1 #title1 h2 {
+  color: #3a7cde;
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+#section1 #title1 p {
+  font-family: "Combo", cursive;
+  font-size: 21px;
+  font-weight: 300;
+}
+
+#section1 #content1 {
+  margin-left: 16px;
+  margin-top: 8px;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* Section 2 - Location */
+
+#section2 {
+  display: flex;
+  width: auto;
+  margin-top: 36px;
+  margin-bottom: 36px;
+}
+
+#section2 h2 {
+  margin-top: 32px;
+  color: #3a7cde;
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#section2 p {
+  margin-top: 48px;
+  margin-right: 8px;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+}
+
+#section2 img {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  border: 2px solid #3a7cde;
+}
+
+#section2 figcaption {
+  margin-top: 8px;
+  color: rgba(0, 0, 0, 0.7);
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+/* Section 3 - Hours */
+
+#section3 {
+  margin-top: 36px;
+  margin-bottom: 36px;
+  display: flex;
+  width: auto;
+  display: flex;
+  width: auto;
+  justify-content: space-around;
+}
+
+#sub-container {
+  display: flex;
+  width: auto;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#section3 img {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  border: 2px solid #3a7cde;
+}
+
+#section3 div h2 {
+  color: #3a7cde;
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+#section3 #heading1 {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+#section3 #hours {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#section3 #hours div {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+#section3 span {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* Section 4 - Reviews */
+
+#section4 {
+  margin-top: 36px;
+  margin-bottom: 36px;
+  width: auto;
+}
+
+#section4 h2 {
+  color: #3a7cde;
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+
+#section4 #container {
+  margin-top: 24px;
+  display: grid;
+  column-gap: 24px;
+  max-width: 98%;
+  grid-template-columns: 50% 50%;
+}
+
+#section4 .review {
+  display: grid;
+  grid-template-areas:
+    "title stars"
+    "content photo";
+  row-gap: 16px;
+}
+
+#section4 h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+#section4 p {
+  margin-right: 8px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+#section4 .author {
+  margin-left: 24px;
+  font-size: 0.9em;
+  font-style: italic;
+  font-weight: 300;
+}
+
+#section4 #stars {
+  grid-row-end: 2;
+}
+
+#section4 .reviewPic {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+}
+
+/* Footer - Similar to Nav */
+
+#footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0px 18% 0px 18%;
+  height: 24px;
+  background-color: rgba(58, 124, 222, 1);
+  color: #ffb800;
+  font-size: 8px;
+}

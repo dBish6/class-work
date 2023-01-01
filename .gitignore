@@ -2,7 +2,40 @@
 # Created by https://www.toptal.com/developers/gitignore/api/node
 # Edit at https://www.toptal.com/developers/gitignore?templates=node
 
-### Node ###
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# STS
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+# IntelliJ IDEA
+.idea
+*.iws
+*.iml
+*.ipr
+
+# Docker
+/back-end/docker-compose.yml
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
 # Logs
 logs
 *.log
@@ -124,6 +157,7 @@ dist
 .tern-port
 
 # Stores VSCode versions used for testing VSCode extensions
+.vscode/
 .vscode-test
 
 # yarn v2
@@ -142,4 +176,9 @@ dist
 # SvelteKit build / generate output
 .svelte-kit
 
+# Ignore the ignore files.
+.prettierignore
+.gitignore
+
 # End of https://www.toptal.com/developers/gitignore/api/node
+.DS_Store

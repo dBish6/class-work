@@ -1,0 +1,1235 @@
+<!-- Software Development Semester 2, Keyin College -->
+<!-- Web Design: Sprint 1 -->
+<!-- Developers: Alex Ridgeley and David Bishop (Team 1) -->
+<!-- Date: February 25, 2022 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Combo&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <script src="script.js"></script>
+
+    <header>
+      <div id="header-container">
+        <a href="/Main-Page/homepage.html">
+          <div id="header-left">
+            <img src="/pictures/Blue-Logo.avif" alt="Restaurant Logo" />
+            <div id="text-container">
+              <h1 id="logo-text-top">Gary Blue's Diner</h1>
+              <h2 id="logo-text-bottom">Fresh and ready to serve!</h2>
+            </div>
+          </div>
+        </a>
+        <div id="header-right">
+          <form action="/Menu/menu.html">
+            <input id="menu-button" type="submit" value="Menu" />
+          </form>
+          <form action="/Order-Page/index.html">
+            <input id="order-now-button" type="submit" value="Order Now!" />
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <nav>
+      <span><a href="/Error-Page/error.html">About Us</a></span>
+      <span><a href="/Error-Page/error.html">Our Employees</a></span>
+      <span><a href="/Error-Page/error.html">Community Outreach</a></span>
+      <span><a href="/Error-Page/error.html">Global Delivery</a></span>
+    </nav>
+
+    <main>
+      <!-- Order Placement -->
+      <h1>Place your Order!</h1>
+      <hr />
+      <section>
+        <div class="container">
+          <div class="name-head"><h2>Item Name</h2></div>
+          <div class="quantity-head"><h2>Quantity</h2></div>
+          <div class="price-head"><h2>Price</h2></div>
+          <div class="last-header"><h2>Total</h2></div>
+        </div>
+
+        <form action="orders.txt" method="get">
+          <div class="order">
+            <div>
+              <label for="foodDropdown-0"></label>
+              <select
+                name="foodDropdown"
+                id="foodDropdown-0"
+                class="item-select"
+                onchange="handleSelect(this.value, 0)"
+              >
+                <option value="optionSelect" disabled selected>
+                  Choose your option
+                </option>
+
+                <option value="main" disabled>------Main------</option>
+                <option value="The Big Gary">The Big Gary</option>
+                <option value="Regular Burger">Regular Burger</option>
+                <option value="Classic Cheeseburger">
+                  Classic Cheeseburger
+                </option>
+                <option value="The Works Burger">The Works Burger</option>
+                <option value="Chili Burger">Chili Burger</option>
+                <option value="Juicy Lucy Burger">Juicy Lucy Burger</option>
+                <option value="Hot Dog">Hot Dog</option>
+                <option value="Chili Dog">Chili Dog</option>
+
+                <option value="breakfast" disabled>
+                  ------Breakfast------
+                </option>
+                <option value="Scrambled Eggs">Scrambled Eggs</option>
+                <option value="Meat Omelette">Meat Omelette</option>
+                <option value="Veggie-Cheese Omelette">
+                  Veggie-Cheese Omelette
+                </option>
+                <option value="Western Omelette">Western Omelette</option>
+                <option value="Eggs on Toast">Eggs on Toast</option>
+                <option value="Waffles">Waffles</option>
+                <option value="Pancakes">Pancakes</option>
+                <option value="Breakfast Burrito">Breakfast Burrito</option>
+
+                <option value="Sides" disabled>
+                  ------Appetizers & Sides------
+                </option>
+                <option value="Classic Fries">Classic Fries</option>
+                <option value="Wings">Chicken Wings</option>
+                <option value="Nachos">Nachos</option>
+                <option value="Mozza Sticks">Mozza Sticks</option>
+
+                <option value="Beverages" disabled>
+                  ------Beverages------
+                </option>
+                <option value="Beverage">Pepsi</option>
+                <option value="Beverage">7up</option>
+                <option value="Beverage">Sprite</option>
+                <option value="Beverage">Fanta</option>
+                <option value="Beverage">Root Beer</option>
+                <option value="Beverage">Lemonade</option>
+                <option value="Beverage">Soda Pop</option>
+                <option value="Beverage">Pepsi</option>
+
+                <option value="Milkshakes" disabled>------Shakes------</option>
+                <option value="Shake">Vanilla Shake</option>
+                <option value="Shake">Strawberry Shake</option>
+                <option value="Shake">Cherry Shake</option>
+                <option value="Shake">Banana Split</option>
+                <option value="Cake">Cheesecake Slice</option>
+                <option value="Shake">Moomoo Milk</option>
+                <option value="Shake">Berry Juice</option>
+              </select>
+            </div>
+            <div>
+              <input
+                id="food-quantity-0"
+                type="number"
+                style="max-width: 3ch"
+                max="5"
+                min="0"
+                value="0"
+                onchange="quantitySelect(this.value, 0)"
+              />
+            </div>
+            <div class="food-price">$0.00</div>
+            <div class="food-total">$0.00</div>
+          </div>
+
+          <div class="order">
+            <div>
+              <label for="foodDropdown-1"></label>
+              <select
+                name="foodDropdown"
+                id="foodDropdown-1"
+                class="item-select"
+                onchange="handleSelect(this.value, 1)"
+              >
+                <option value="optionSelect" disabled selected>
+                  Choose your option
+                </option>
+
+                <option value="main" disabled>------Main------</option>
+                <option value="The Big Gary">The Big Gary</option>
+                <option value="Regular Burger">Regular Burger</option>
+                <option value="Classic Cheeseburger">
+                  Classic Cheeseburger
+                </option>
+                <option value="The Works Burger">The Works Burger</option>
+                <option value="Chili Burger">Chili Burger</option>
+                <option value="Juicy Lucy Burger">Juicy Lucy Burger</option>
+                <option value="Hot Dog">Hot Dog</option>
+                <option value="Chili Dog">Chili Dog</option>
+
+                <option value="breakfast" disabled>
+                  ------Breakfast------
+                </option>
+                <option value="Scrambled Eggs">Scrambled Eggs</option>
+                <option value="Meat Omelette">Meat Omelette</option>
+                <option value="Veggie-Cheese Omelette">
+                  Veggie-Cheese Omelette
+                </option>
+                <option value="Western Omelette">Western Omelette</option>
+                <option value="Eggs on Toast">Eggs on Toast</option>
+                <option value="Waffles">Waffles</option>
+                <option value="Pancakes">Pancakes</option>
+                <option value="Breakfast Burrito">Breakfast Burrito</option>
+
+                <option value="Sides" disabled>
+                  ------Appetizers & Sides------
+                </option>
+                <option value="Classic Fries">Classic Fries</option>
+                <option value="Wings">Chicken Wings</option>
+                <option value="Nachos">Nachos</option>
+                <option value="Mozza Sticks">Mozza Sticks</option>
+
+                <option value="Beverages" disabled>
+                  ------Beverages------
+                </option>
+                <option value="Beverage">Pepsi</option>
+                <option value="Beverage">7up</option>
+                <option value="Beverage">Sprite</option>
+                <option value="Beverage">Fanta</option>
+                <option value="Beverage">Root Beer</option>
+                <option value="Beverage">Lemonade</option>
+                <option value="Beverage">Soda Pop</option>
+                <option value="Beverage">Pepsi</option>
+
+                <option value="Milkshakes" disabled>------Shakes------</option>
+                <option value="Shake">Vanilla Shake</option>
+                <option value="Shake">Strawberry Shake</option>
+                <option value="Shake">Cherry Shake</option>
+                <option value="Shake">Banana Split</option>
+                <option value="Cake">Cheesecake Slice</option>
+                <option value="Shake">Moomoo Milk</option>
+                <option value="Shake">Berry Juice</option>
+              </select>
+            </div>
+            <div>
+              <input
+                id="food-quantity-1"
+                type="number"
+                style="max-width: 3ch"
+                max="5"
+                min="0"
+                value="0"
+                onchange="quantitySelect(this.value, 1)"
+              />
+            </div>
+            <div class="food-price">$0.00</div>
+            <div class="food-total">$0.00</div>
+          </div>
+
+          <div class="order">
+            <div>
+              <label for="foodDropdown-2"></label>
+              <select
+                name="foodDropdown"
+                id="foodDropdown-2"
+                class="item-select"
+                onchange="handleSelect(this.value, 2)"
+              >
+                <option value="optionSelect" disabled selected>
+                  Choose your option
+                </option>
+
+                <option value="main" disabled>------Main------</option>
+                <option value="The Big Gary">The Big Gary</option>
+                <option value="Regular Burger">Regular Burger</option>
+                <option value="Classic Cheeseburger">
+                  Classic Cheeseburger
+                </option>
+                <option value="The Works Burger">The Works Burger</option>
+                <option value="Chili Burger">Chili Burger</option>
+                <option value="Juicy Lucy Burger">Juicy Lucy Burger</option>
+                <option value="Hot Dog">Hot Dog</option>
+                <option value="Chili Dog">Chili Dog</option>
+
+                <option value="breakfast" disabled>
+                  ------Breakfast------
+                </option>
+                <option value="Scrambled Eggs">Scrambled Eggs</option>
+                <option value="Meat Omelette">Meat Omelette</option>
+                <option value="Veggie-Cheese Omelette">
+                  Veggie-Cheese Omelette
+                </option>
+                <option value="Western Omelette">Western Omelette</option>
+                <option value="Eggs on Toast">Eggs on Toast</option>
+                <option value="Waffles">Waffles</option>
+                <option value="Pancakes">Pancakes</option>
+                <option value="Breakfast Burrito">Breakfast Burrito</option>
+
+                <option value="Sides" disabled>
+                  ------Appetizers & Sides------
+                </option>
+                <option value="Classic Fries">Classic Fries</option>
+                <option value="Wings">Chicken Wings</option>
+                <option value="Nachos">Nachos</option>
+                <option value="Mozza Sticks">Mozza Sticks</option>
+
+                <option value="Beverages" disabled>
+                  ------Beverages------
+                </option>
+                <option value="Beverage">Pepsi</option>
+                <option value="Beverage">7up</option>
+                <option value="Beverage">Sprite</option>
+                <option value="Beverage">Fanta</option>
+                <option value="Beverage">Root Beer</option>
+                <option value="Beverage">Lemonade</option>
+                <option value="Beverage">Soda Pop</option>
+                <option value="Beverage">Pepsi</option>
+
+                <option value="Milkshakes" disabled>------Shakes------</option>
+                <option value="Shake">Vanilla Shake</option>
+                <option value="Shake">Strawberry Shake</option>
+                <option value="Shake">Cherry Shake</option>
+                <option value="Shake">Banana Split</option>
+                <option value="Cake">Cheesecake Slice</option>
+                <option value="Shake">Moomoo Milk</option>
+                <option value="Shake">Berry Juice</option>
+              </select>
+            </div>
+            <div>
+              <input
+                id="food-quantity-2"
+                type="number"
+                style="max-width: 3ch"
+                max="5"
+                min="0"
+                value="0"
+                onchange="quantitySelect(this.value, 2)"
+              />
+            </div>
+            <div class="food-price">$0.00</div>
+            <div class="food-total">$0.00</div>
+          </div>
+
+          <div class="order">
+            <div>
+              <label for="foodDropdown-3"></label>
+              <select
+                name="foodDropdown"
+                id="foodDropdown-3"
+                class="item-select"
+                onchange="handleSelect(this.value, 3)"
+              >
+                <option value="optionSelect" disabled selected>
+                  Choose your option
+                </option>
+
+                <option value="main" disabled>------Main------</option>
+                <option value="The Big Gary">The Big Gary</option>
+                <option value="Regular Burger">Regular Burger</option>
+                <option value="Classic Cheeseburger">
+                  Classic Cheeseburger
+                </option>
+                <option value="The Works Burger">The Works Burger</option>
+                <option value="Chili Burger">Chili Burger</option>
+                <option value="Juicy Lucy Burger">Juicy Lucy Burger</option>
+                <option value="Hot Dog">Hot Dog</option>
+                <option value="Chili Dog">Chili Dog</option>
+
+                <option value="breakfast" disabled>
+                  ------Breakfast------
+                </option>
+                <option value="Scrambled Eggs">Scrambled Eggs</option>
+                <option value="Meat Omelette">Meat Omelette</option>
+                <option value="Veggie-Cheese Omelette">
+                  Veggie-Cheese Omelette
+                </option>
+                <option value="Western Omelette">Western Omelette</option>
+                <option value="Eggs on Toast">Eggs on Toast</option>
+                <option value="Waffles">Waffles</option>
+                <option value="Pancakes">Pancakes</option>
+                <option value="Breakfast Burrito">Breakfast Burrito</option>
+
+                <option value="Sides" disabled>
+                  ------Appetizers & Sides------
+                </option>
+                <option value="Classic Fries">Classic Fries</option>
+                <option value="Wings">Chicken Wings</option>
+                <option value="Nachos">Nachos</option>
+                <option value="Mozza Sticks">Mozza Sticks</option>
+
+                <option value="Beverages" disabled>
+                  ------Beverages------
+                </option>
+                <option value="Beverage">Pepsi</option>
+                <option value="Beverage">7up</option>
+                <option value="Beverage">Sprite</option>
+                <option value="Beverage">Fanta</option>
+                <option value="Beverage">Root Beer</option>
+                <option value="Beverage">Lemonade</option>
+                <option value="Beverage">Soda Pop</option>
+                <option value="Beverage">Pepsi</option>
+
+                <option value="Milkshakes" disabled>------Shakes------</option>
+                <option value="Shake">Vanilla Shake</option>
+                <option value="Shake">Strawberry Shake</option>
+                <option value="Shake">Cherry Shake</option>
+                <option value="Shake">Banana Split</option>
+                <option value="Cake">Cheesecake Slice</option>
+                <option value="Shake">Moomoo Milk</option>
+                <option value="Shake">Berry Juice</option>
+              </select>
+            </div>
+            <div>
+              <input
+                id="food-quantity-3"
+                type="number"
+                style="max-width: 3ch"
+                max="5"
+                min="0"
+                value="0"
+                onchange="quantitySelect(this.value, 3)"
+              />
+            </div>
+            <div class="food-price">$0.00</div>
+            <div class="food-total">$0.00</div>
+          </div>
+
+          <div class="order">
+            <div>
+              <label for="foodDropdown-4"></label>
+              <select
+                name="foodDropdown"
+                id="foodDropdown-4"
+                class="item-select"
+                onchange="handleSelect(this.value, 4)"
+              >
+                <option value="optionSelect" disabled selected>
+                  Choose your option
+                </option>
+
+                <option value="main" disabled>------Main------</option>
+                <option value="The Big Gary">The Big Gary</option>
+                <option value="Regular Burger">Regular Burger</option>
+                <option value="Classic Cheeseburger">
+                  Classic Cheeseburger
+                </option>
+                <option value="The Works Burger">The Works Burger</option>
+                <option value="Chili Burger">Chili Burger</option>
+                <option value="Juicy Lucy Burger">Juicy Lucy Burger</option>
+                <option value="Hot Dog">Hot Dog</option>
+                <option value="Chili Dog">Chili Dog</option>
+
+                <option value="breakfast" disabled>
+                  ------Breakfast------
+                </option>
+                <option value="Scrambled Eggs">Scrambled Eggs</option>
+                <option value="Meat Omelette">Meat Omelette</option>
+                <option value="Veggie-Cheese Omelette">
+                  Veggie-Cheese Omelette
+                </option>
+                <option value="Western Omelette">Western Omelette</option>
+                <option value="Eggs on Toast">Eggs on Toast</option>
+                <option value="Waffles">Waffles</option>
+                <option value="Pancakes">Pancakes</option>
+                <option value="Breakfast Burrito">Breakfast Burrito</option>
+
+                <option value="Sides" disabled>
+                  ------Appetizers & Sides------
+                </option>
+                <option value="Classic Fries">Classic Fries</option>
+                <option value="Wings">Chicken Wings</option>
+                <option value="Nachos">Nachos</option>
+                <option value="Mozza Sticks">Mozza Sticks</option>
+
+                <option value="Beverages" disabled>
+                  ------Beverages------
+                </option>
+                <option value="Beverage">Pepsi</option>
+                <option value="Beverage">7up</option>
+                <option value="Beverage">Sprite</option>
+                <option value="Beverage">Fanta</option>
+                <option value="Beverage">Root Beer</option>
+                <option value="Beverage">Lemonade</option>
+                <option value="Beverage">Soda Pop</option>
+                <option value="Beverage">Pepsi</option>
+
+                <option value="Milkshakes" disabled>------Shakes------</option>
+                <option value="Shake">Vanilla Shake</option>
+                <option value="Shake">Strawberry Shake</option>
+                <option value="Shake">Cherry Shake</option>
+                <option value="Shake">Banana Split</option>
+                <option value="Cake">Cheesecake Slice</option>
+                <option value="Shake">Moomoo Milk</option>
+                <option value="Shake">Berry Juice</option>
+              </select>
+            </div>
+            <div>
+              <input
+                id="food-quantity-4"
+                type="number"
+                style="max-width: 3ch"
+                max="5"
+                min="0"
+                value="0"
+                onchange="quantitySelect(this.value, 4)"
+              />
+            </div>
+            <div class="food-price">$0.00</div>
+            <div class="food-total">$0.00</div>
+          </div>
+
+          <div class="order">
+            <div>
+              <label for="foodDropdown-5"></label>
+              <select
+                name="foodDropdown"
+                id="foodDropdown-5"
+                class="item-select"
+                onchange="handleSelect(this.value, 5)"
+              >
+                <option value="optionSelect" disabled selected>
+                  Choose your option
+                </option>
+
+                <option value="main" disabled>------Main------</option>
+                <option value="The Big Gary">The Big Gary</option>
+                <option value="Regular Burger">Regular Burger</option>
+                <option value="Classic Cheeseburger">
+                  Classic Cheeseburger
+                </option>
+                <option value="The Works Burger">The Works Burger</option>
+                <option value="Chili Burger">Chili Burger</option>
+                <option value="Juicy Lucy Burger">Juicy Lucy Burger</option>
+                <option value="Hot Dog">Hot Dog</option>
+                <option value="Chili Dog">Chili Dog</option>
+
+                <option value="breakfast" disabled>
+                  ------Breakfast------
+                </option>
+                <option value="Scrambled Eggs">Scrambled Eggs</option>
+                <option value="Meat Omelette">Meat Omelette</option>
+                <option value="Veggie-Cheese Omelette">
+                  Veggie-Cheese Omelette
+                </option>
+                <option value="Western Omelette">Western Omelette</option>
+                <option value="Eggs on Toast">Eggs on Toast</option>
+                <option value="Waffles">Waffles</option>
+                <option value="Pancakes">Pancakes</option>
+                <option value="Breakfast Burrito">Breakfast Burrito</option>
+
+                <option value="Sides" disabled>
+                  ------Appetizers & Sides------
+                </option>
+                <option value="Classic Fries">Classic Fries</option>
+                <option value="Wings">Chicken Wings</option>
+                <option value="Nachos">Nachos</option>
+                <option value="Mozza Sticks">Mozza Sticks</option>
+
+                <option value="Beverages" disabled>
+                  ------Beverages------
+                </option>
+                <option value="Beverage">Pepsi</option>
+                <option value="Beverage">7up</option>
+                <option value="Beverage">Sprite</option>
+                <option value="Beverage">Fanta</option>
+                <option value="Beverage">Root Beer</option>
+                <option value="Beverage">Lemonade</option>
+                <option value="Beverage">Soda Pop</option>
+                <option value="Beverage">Pepsi</option>
+
+                <option value="Milkshakes" disabled>------Shakes------</option>
+                <option value="Shake">Vanilla Shake</option>
+                <option value="Shake">Strawberry Shake</option>
+                <option value="Shake">Cherry Shake</option>
+                <option value="Shake">Banana Split</option>
+                <option value="Cake">Cheesecake Slice</option>
+                <option value="Shake">Moomoo Milk</option>
+                <option value="Shake">Berry Juice</option>
+              </select>
+            </div>
+            <div>
+              <input
+                id="food-quantity-5"
+                type="number"
+                style="max-width: 3ch"
+                max="5"
+                min="0"
+                value="0"
+                onchange="quantitySelect(this.value, 5)"
+              />
+            </div>
+            <div class="food-price">$0.00</div>
+            <div class="food-total">$0.00</div>
+          </div>
+
+          <div class="order">
+            <div>
+              <label for="foodDropdown-6"></label>
+              <select
+                name="foodDropdown"
+                id="foodDropdown-6"
+                class="item-select"
+                onchange="handleSelect(this.value, 6)"
+              >
+                <option value="optionSelect" disabled selected>
+                  Choose your option
+                </option>
+
+                <option value="main" disabled>------Main------</option>
+                <option value="The Big Gary">The Big Gary</option>
+                <option value="Regular Burger">Regular Burger</option>
+                <option value="Classic Cheeseburger">
+                  Classic Cheeseburger
+                </option>
+                <option value="The Works Burger">The Works Burger</option>
+                <option value="Chili Burger">Chili Burger</option>
+                <option value="Juicy Lucy Burger">Juicy Lucy Burger</option>
+                <option value="Hot Dog">Hot Dog</option>
+                <option value="Chili Dog">Chili Dog</option>
+
+                <option value="breakfast" disabled>
+                  ------Breakfast------
+                </option>
+                <option value="Scrambled Eggs">Scrambled Eggs</option>
+                <option value="Meat Omelette">Meat Omelette</option>
+                <option value="Veggie-Cheese Omelette">
+                  Veggie-Cheese Omelette
+                </option>
+                <option value="Western Omelette">Western Omelette</option>
+                <option value="Eggs on Toast">Eggs on Toast</option>
+                <option value="Waffles">Waffles</option>
+                <option value="Pancakes">Pancakes</option>
+                <option value="Breakfast Burrito">Breakfast Burrito</option>
+
+                <option value="Sides" disabled>
+                  ------Appetizers & Sides------
+                </option>
+                <option value="Classic Fries">Classic Fries</option>
+                <option value="Wings">Chicken Wings</option>
+                <option value="Nachos">Nachos</option>
+                <option value="Mozza Sticks">Mozza Sticks</option>
+
+                <option value="Beverages" disabled>
+                  ------Beverages------
+                </option>
+                <option value="Beverage">Pepsi</option>
+                <option value="Beverage">7up</option>
+                <option value="Beverage">Sprite</option>
+                <option value="Beverage">Fanta</option>
+                <option value="Beverage">Root Beer</option>
+                <option value="Beverage">Lemonade</option>
+                <option value="Beverage">Soda Pop</option>
+                <option value="Beverage">Pepsi</option>
+
+                <option value="Milkshakes" disabled>------Shakes------</option>
+                <option value="Shake">Vanilla Shake</option>
+                <option value="Shake">Strawberry Shake</option>
+                <option value="Shake">Cherry Shake</option>
+                <option value="Shake">Banana Split</option>
+                <option value="Cake">Cheesecake Slice</option>
+                <option value="Shake">Moomoo Milk</option>
+                <option value="Shake">Berry Juice</option>
+              </select>
+            </div>
+            <div>
+              <input
+                id="food-quantity-6"
+                type="number"
+                style="max-width: 3ch"
+                max="5"
+                min="0"
+                value="0"
+                onchange="quantitySelect(this.value, 6)"
+              />
+            </div>
+            <div class="food-price">$0.00</div>
+            <div class="food-total">$0.00</div>
+          </div>
+
+          <div class="order">
+            <div>
+              <label for="foodDropdown-7"></label>
+              <select
+                name="foodDropdown"
+                id="foodDropdown-7"
+                class="item-select"
+                onchange="handleSelect(this.value, 7)"
+              >
+                <option value="optionSelect" disabled selected>
+                  Choose your option
+                </option>
+
+                <option value="main" disabled>------Main------</option>
+                <option value="The Big Gary">The Big Gary</option>
+                <option value="Regular Burger">Regular Burger</option>
+                <option value="Classic Cheeseburger">
+                  Classic Cheeseburger
+                </option>
+                <option value="The Works Burger">The Works Burger</option>
+                <option value="Chili Burger">Chili Burger</option>
+                <option value="Juicy Lucy Burger">Juicy Lucy Burger</option>
+                <option value="Hot Dog">Hot Dog</option>
+                <option value="Chili Dog">Chili Dog</option>
+
+                <option value="breakfast" disabled>
+                  ------Breakfast------
+                </option>
+                <option value="Scrambled Eggs">Scrambled Eggs</option>
+                <option value="Meat Omelette">Meat Omelette</option>
+                <option value="Veggie-Cheese Omelette">
+                  Veggie-Cheese Omelette
+                </option>
+                <option value="Western Omelette">Western Omelette</option>
+                <option value="Eggs on Toast">Eggs on Toast</option>
+                <option value="Waffles">Waffles</option>
+                <option value="Pancakes">Pancakes</option>
+                <option value="Breakfast Burrito">Breakfast Burrito</option>
+
+                <option value="Sides" disabled>
+                  ------Appetizers & Sides------
+                </option>
+                <option value="Classic Fries">Classic Fries</option>
+                <option value="Wings">Chicken Wings</option>
+                <option value="Nachos">Nachos</option>
+                <option value="Mozza Sticks">Mozza Sticks</option>
+
+                <option value="Beverages" disabled>
+                  ------Beverages------
+                </option>
+                <option value="Beverage">Pepsi</option>
+                <option value="Beverage">7up</option>
+                <option value="Beverage">Sprite</option>
+                <option value="Beverage">Fanta</option>
+                <option value="Beverage">Root Beer</option>
+                <option value="Beverage">Lemonade</option>
+                <option value="Beverage">Soda Pop</option>
+                <option value="Beverage">Pepsi</option>
+
+                <option value="Milkshakes" disabled>------Shakes------</option>
+                <option value="Shake">Vanilla Shake</option>
+                <option value="Shake">Strawberry Shake</option>
+                <option value="Shake">Cherry Shake</option>
+                <option value="Shake">Banana Split</option>
+                <option value="Cake">Cheesecake Slice</option>
+                <option value="Shake">Moomoo Milk</option>
+                <option value="Shake">Berry Juice</option>
+              </select>
+            </div>
+            <div>
+              <input
+                id="food-quantity-7"
+                type="number"
+                style="max-width: 3ch"
+                max="5"
+                min="0"
+                value="0"
+                onchange="quantitySelect(this.value, 7)"
+              />
+            </div>
+            <div class="food-price">$0.00</div>
+            <div class="food-total">$0.00</div>
+          </div>
+
+          <div class="order">
+            <div>
+              <label for="foodDropdown-8"></label>
+              <select
+                name="foodDropdown"
+                id="foodDropdown-8"
+                class="item-select"
+                onchange="handleSelect(this.value, 8)"
+              >
+                <option value="optionSelect" disabled selected>
+                  Choose your option
+                </option>
+
+                <option value="main" disabled>------Main------</option>
+                <option value="The Big Gary">The Big Gary</option>
+                <option value="Regular Burger">Regular Burger</option>
+                <option value="Classic Cheeseburger">
+                  Classic Cheeseburger
+                </option>
+                <option value="The Works Burger">The Works Burger</option>
+                <option value="Chili Burger">Chili Burger</option>
+                <option value="Juicy Lucy Burger">Juicy Lucy Burger</option>
+                <option value="Hot Dog">Hot Dog</option>
+                <option value="Chili Dog">Chili Dog</option>
+
+                <option value="breakfast" disabled>
+                  ------Breakfast------
+                </option>
+                <option value="Scrambled Eggs">Scrambled Eggs</option>
+                <option value="Meat Omelette">Meat Omelette</option>
+                <option value="Veggie-Cheese Omelette">
+                  Veggie-Cheese Omelette
+                </option>
+                <option value="Western Omelette">Western Omelette</option>
+                <option value="Eggs on Toast">Eggs on Toast</option>
+                <option value="Waffles">Waffles</option>
+                <option value="Pancakes">Pancakes</option>
+                <option value="Breakfast Burrito">Breakfast Burrito</option>
+
+                <option value="Sides" disabled>
+                  ------Appetizers & Sides------
+                </option>
+                <option value="Classic Fries">Classic Fries</option>
+                <option value="Wings">Chicken Wings</option>
+                <option value="Nachos">Nachos</option>
+                <option value="Mozza Sticks">Mozza Sticks</option>
+
+                <option value="Beverages" disabled>
+                  ------Beverages------
+                </option>
+                <option value="Beverage">Pepsi</option>
+                <option value="Beverage">7up</option>
+                <option value="Beverage">Sprite</option>
+                <option value="Beverage">Fanta</option>
+                <option value="Beverage">Root Beer</option>
+                <option value="Beverage">Lemonade</option>
+                <option value="Beverage">Soda Pop</option>
+                <option value="Beverage">Pepsi</option>
+
+                <option value="Milkshakes" disabled>------Shakes------</option>
+                <option value="Shake">Vanilla Shake</option>
+                <option value="Shake">Strawberry Shake</option>
+                <option value="Shake">Cherry Shake</option>
+                <option value="Shake">Banana Split</option>
+                <option value="Cake">Cheesecake Slice</option>
+                <option value="Shake">Moomoo Milk</option>
+                <option value="Shake">Berry Juice</option>
+              </select>
+            </div>
+            <div>
+              <input
+                id="food-quantity-8"
+                type="number"
+                style="max-width: 3ch"
+                max="5"
+                min="0"
+                value="0"
+                onchange="quantitySelect(this.value, 8)"
+              />
+            </div>
+            <div class="food-price">$0.00</div>
+            <div class="food-total">$0.00</div>
+          </div>
+
+          <div class="order">
+            <div>
+              <label for="foodDropdown-9"></label>
+              <select
+                name="foodDropdown"
+                id="foodDropdown-9"
+                class="item-select"
+                onchange="handleSelect(this.value, 9)"
+              >
+                <option value="optionSelect" disabled selected>
+                  Choose your option
+                </option>
+
+                <option value="main" disabled>------Main------</option>
+                <option value="The Big Gary">The Big Gary</option>
+                <option value="Regular Burger">Regular Burger</option>
+                <option value="Classic Cheeseburger">
+                  Classic Cheeseburger
+                </option>
+                <option value="The Works Burger">The Works Burger</option>
+                <option value="Chili Burger">Chili Burger</option>
+                <option value="Juicy Lucy Burger">Juicy Lucy Burger</option>
+                <option value="Hot Dog">Hot Dog</option>
+                <option value="Chili Dog">Chili Dog</option>
+
+                <option value="breakfast" disabled>
+                  ------Breakfast------
+                </option>
+                <option value="Scrambled Eggs">Scrambled Eggs</option>
+                <option value="Meat Omelette">Meat Omelette</option>
+                <option value="Veggie-Cheese Omelette">
+                  Veggie-Cheese Omelette
+                </option>
+                <option value="Western Omelette">Western Omelette</option>
+                <option value="Eggs on Toast">Eggs on Toast</option>
+                <option value="Waffles">Waffles</option>
+                <option value="Pancakes">Pancakes</option>
+                <option value="Breakfast Burrito">Breakfast Burrito</option>
+
+                <option value="Sides" disabled>
+                  ------Appetizers & Sides------
+                </option>
+                <option value="Classic Fries">Classic Fries</option>
+                <option value="Wings">Chicken Wings</option>
+                <option value="Nachos">Nachos</option>
+                <option value="Mozza Sticks">Mozza Sticks</option>
+
+                <option value="Beverages" disabled>
+                  ------Beverages------
+                </option>
+                <option value="Beverage">Pepsi</option>
+                <option value="Beverage">7up</option>
+                <option value="Beverage">Sprite</option>
+                <option value="Beverage">Fanta</option>
+                <option value="Beverage">Root Beer</option>
+                <option value="Beverage">Lemonade</option>
+                <option value="Beverage">Soda Pop</option>
+                <option value="Beverage">Pepsi</option>
+
+                <option value="Milkshakes" disabled>------Shakes------</option>
+                <option value="Shake">Vanilla Shake</option>
+                <option value="Shake">Strawberry Shake</option>
+                <option value="Shake">Cherry Shake</option>
+                <option value="Shake">Banana Split</option>
+                <option value="Cake">Cheesecake Slice</option>
+                <option value="Shake">Moomoo Milk</option>
+                <option value="Shake">Berry Juice</option>
+              </select>
+            </div>
+            <div>
+              <input
+                id="food-quantity-9"
+                type="number"
+                style="max-width: 3ch"
+                max="5"
+                min="0"
+                value="0"
+                onchange="quantitySelect(this.value, 9)"
+              />
+            </div>
+            <div class="food-price">$0.00</div>
+            <div class="food-total">$0.00</div>
+          </div>
+
+          <div class="order">
+            <div>
+              <label for="foodDropdown-10"></label>
+              <select
+                name="foodDropdown"
+                id="foodDropdown-10"
+                class="item-select"
+                onchange="handleSelect(this.value, 10)"
+              >
+                <option value="optionSelect" disabled selected>
+                  Choose your option
+                </option>
+
+                <option value="main" disabled>------Main------</option>
+                <option value="The Big Gary">The Big Gary</option>
+                <option value="Regular Burger">Regular Burger</option>
+                <option value="Classic Cheeseburger">
+                  Classic Cheeseburger
+                </option>
+                <option value="The Works Burger">The Works Burger</option>
+                <option value="Chili Burger">Chili Burger</option>
+                <option value="Juicy Lucy Burger">Juicy Lucy Burger</option>
+                <option value="Hot Dog">Hot Dog</option>
+                <option value="Chili Dog">Chili Dog</option>
+
+                <option value="breakfast" disabled>
+                  ------Breakfast------
+                </option>
+                <option value="Scrambled Eggs">Scrambled Eggs</option>
+                <option value="Meat Omelette">Meat Omelette</option>
+                <option value="Veggie-Cheese Omelette">
+                  Veggie-Cheese Omelette
+                </option>
+                <option value="Western Omelette">Western Omelette</option>
+                <option value="Eggs on Toast">Eggs on Toast</option>
+                <option value="Waffles">Waffles</option>
+                <option value="Pancakes">Pancakes</option>
+                <option value="Breakfast Burrito">Breakfast Burrito</option>
+
+                <option value="Sides" disabled>
+                  ------Appetizers & Sides------
+                </option>
+                <option value="Classic Fries">Classic Fries</option>
+                <option value="Wings">Chicken Wings</option>
+                <option value="Nachos">Nachos</option>
+                <option value="Mozza Sticks">Mozza Sticks</option>
+
+                <option value="Beverages" disabled>
+                  ------Beverages------
+                </option>
+                <option value="Beverage">Pepsi</option>
+                <option value="Beverage">7up</option>
+                <option value="Beverage">Sprite</option>
+                <option value="Beverage">Fanta</option>
+                <option value="Beverage">Root Beer</option>
+                <option value="Beverage">Lemonade</option>
+                <option value="Beverage">Soda Pop</option>
+                <option value="Beverage">Pepsi</option>
+
+                <option value="Milkshakes" disabled>------Shakes------</option>
+                <option value="Shake">Vanilla Shake</option>
+                <option value="Shake">Strawberry Shake</option>
+                <option value="Shake">Cherry Shake</option>
+                <option value="Shake">Banana Split</option>
+                <option value="Cake">Cheesecake Slice</option>
+                <option value="Shake">Moomoo Milk</option>
+                <option value="Shake">Berry Juice</option>
+              </select>
+            </div>
+            <div>
+              <input
+                id="food-quantity-10"
+                type="number"
+                style="max-width: 3ch"
+                max="5"
+                min="0"
+                value="0"
+                onchange="quantitySelect(this.value, 10)"
+              />
+            </div>
+            <div class="food-price">$0.00</div>
+            <div class="food-total">$0.00</div>
+          </div>
+
+          <!-- Totals and Customer Info -->
+
+          <div id="total">
+            <div class="grid-form">
+              <h2
+                style="
+                  text-decoration: underline;
+                  margin-top: 8px;
+                  text-align: center;
+                "
+              >
+                Customer Info
+              </h2>
+              <div>
+                <!-- Customer Name -->
+                <div class="grid-flex">
+                  <div>
+                    <label for="first-name">First Name:</label>
+                    <input
+                      type="text"
+                      id="first-name"
+                      name="firstname"
+                      autocomplete="given-name"
+                      placeholder="First Name"
+                      maxlength="30"
+                    />
+                  </div>
+
+                  <div>
+                    <label for="last-name">Last Name:</label>
+                    <input
+                      type="text"
+                      id="last-name"
+                      name="lastname"
+                      autocomplete="family-name"
+                      placeholder="Last Name"
+                      maxlength="30"
+                    />
+                  </div>
+                </div>
+                <!-- Phone/Email -->
+                <div class="grid-flex">
+                  <div>
+                    <label for="phone-no">Phone Number:</label>
+                    <input
+                      type="text"
+                      id="phone-no"
+                      name="phone"
+                      autocomplete="tel"
+                      placeholder="Phone Number"
+                    />
+                  </div>
+                  <div>
+                    <label for="email">Email Address:</label>
+                    <input
+                      type="text"
+                      id="email"
+                      name="email"
+                      autocomplete="email"
+                      placeholder="Email Address"
+                      required
+                    />
+                  </div>
+                </div>
+                <!-- Order Type -->
+                <div class="grid-flex">
+                  <label>Order Type:</label>
+                  <div>
+                    <label class="order-type-container">
+                      <input type="radio" name="order-type" />
+                      <span class="checkmark"></span>Delivery
+                    </label>
+                  </div>
+                  <div>
+                    <label class="order-type-container">
+                      <input type="radio" name="order-type" />
+                      <span class="checkmark"></span>In-Store Pickup
+                    </label>
+                  </div>
+                  <div>
+                    <label class="order-type-container">
+                      <input type="radio" name="order-type" />
+                      <span class="checkmark"></span>Dine-in
+                    </label>
+                  </div>
+                </div>
+                <!-- Address Info -->
+                <div>
+                  <label for="address-1">Street Address:</label>
+                  <input
+                    style="width: 83%"
+                    type="text"
+                    id="address-1"
+                    name="address1"
+                    autocomplete="address-line1"
+                    placeholder="Street Address"
+                  />
+                </div>
+
+                <div class="grid-flex">
+                  <div>
+                    <label for="city-info">City:</label>
+                    <input
+                      type="text"
+                      id="city-info"
+                      name="city"
+                      autocomplete="address-level2"
+                      placeholder="City"
+                    />
+                  </div>
+                  <div>
+                    <label for="province-info">Province:</label>
+                    <input
+                      type="text"
+                      id="province-info"
+                      name="province"
+                      autocomplete="address-level1"
+                      placeholder="Province"
+                    />
+                  </div>
+                  <div>
+                    <label for="postal-code">Postal Code:</label>
+                    <input
+                      type="text"
+                      id="postal-code"
+                      name="postal"
+                      autocomplete="postal-code"
+                      placeholder="Postal Code"
+                    />
+                  </div>
+                </div>
+
+                <hr />
+                <!-- Payment Info -->
+                <div class="grid-flex">
+                  <label>Payment Method:</label>
+                  <div>
+                    <label class="payment-method-container">
+                      <input type="radio" name="payment-method" />
+                      <span class="checkmark"></span>Credit/Debit
+                    </label>
+                  </div>
+                  <div>
+                    <label class="payment-method-container">
+                      <input type="radio" name="payment-method" />
+                      <span class="checkmark"></span>Cash
+                    </label>
+                  </div>
+                  <div>
+                    <label class="payment-method-container">
+                      <input type="radio" name="payment-method" />
+                      <span class="checkmark"></span>Gift Card
+                    </label>
+                  </div>
+                </div>
+
+                <div>
+                  <label for="credit-card">Credit Card Number:</label>
+                  <input
+                    style="width: 78.5%"
+                    type="text"
+                    id="credit-card"
+                    name="credit-card"
+                    autocomplete="cc-number"
+                    placeholder="Credit Card Number"
+                  />
+                </div>
+
+                <div class="grid-flex">
+                  <div>
+                    <label for="expiry-date">Expiry Date:</label>
+                    <input
+                      type="month"
+                      id="expiry-date"
+                      name="cc-exp"
+                      autocomplete="cc-exp"
+                    />
+                  </div>
+                  <div>
+                    <label for="cc-security">Security Code:</label>
+                    <input
+                      type="number"
+                      id="cc-security"
+                      name="security"
+                      placeholder="CSC"
+                      min="000"
+                      max="999"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Right Side - Order Button and Total Amounts -->
+            <div class="grid-orderButton">
+              <input
+                id="finish"
+                type="button"
+                value="Ready to Order!"
+                onclick="calcSubTotal()"
+              />
+            </div>
+            <div class="grid-subtotal">
+              <div class="grid-align">
+                <span>Subtotal: </span><span id="subtotal">$0.00</span>
+              </div>
+            </div>
+            <div class="grid-hst">
+              <div class="grid-align">
+                <span> HST @ 15%: </span><span id="hst">$0.00</span>
+              </div>
+            </div>
+            <div class="grid-total">
+              <div class="grid-align">
+                <span>Total: </span><span id="final-total">$0.00</span>
+              </div>
+            </div>
+            <div class="grid-placeOrder">
+              <input
+                id="place-order-button"
+                type="reset"
+                value="Place Order!"
+              />
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <nav id="footer">
+        <span><a href="/Menu/menu.html">Menu</a></span>
+        <span><a href="/Error-Page/error.html">Our Employees</a></span>
+        <span><a href="/Error-Page/error.html">Community Outreach</a></span>
+        <span><a href="/Error-Page/error.html">Global Delivery</a></span>
+      </nav>
+    </footer>
+  </body>
+</html>

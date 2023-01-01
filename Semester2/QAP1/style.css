@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Andada+Pro&family=Nanum+Gothic&family=Raleway:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+
+/* Top, Right, Bottom, Left */
+body {
+  background: rgba(222, 184, 135, 0.384);
+}
+
+main {
+  line-height: 1.8;
+}
+
+/* Side Panel Start*/
+/* Don't need this. */
+.wrapper {
+  display: flex;
+}
+/* Here */
+
+.wrapper .sidePanel {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  background: rgba(32, 178, 171, 0.466);
+  padding: 30px;
+}
+
+.sidePanel h2 {
+  color: white;
+  text-align: center;
+  padding-top: 0px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid white;
+  margin: 0;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.sidePanel ul {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0;
+}
+
+.sidePanel li {
+  padding: 15px;
+  border-bottom: 1px solid white;
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+.sidePanel li a {
+  color: white;
+  display: block;
+}
+/* Side Panel End*/
+
+.format {
+  margin-left: 300px;
+  max-width: 695px;
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+.heading {
+  margin-left: 300px;
+  margin-bottom: 16px;
+  text-decoration: underline;
+  text-emphasis-style: unset;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+#publish {
+  margin-left: 270px;
+  font-size: 0.8em;
+  color: rgba(255, 0, 0, 0.479);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#title {
+  margin-left: 300px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+#author_date {
+  margin-left: 300px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+#blockquote {
+  margin-left: 390px;
+  max-width: 500px;
+  background: rgba(255, 127, 80, 0.596);
+  border: 1px solid black;
+  padding-bottom: 5mm;
+  text-align: center;
+  line-height: 1.2;
+}
+
+#facts {
+  margin-left: 300px;
+  max-width: 685px;
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+#footer {
+  margin-left: 270px;
+  color: rgba(0, 0, 0, 0.5);
+}

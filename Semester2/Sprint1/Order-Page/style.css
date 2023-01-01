@@ -1,0 +1,348 @@
+html {
+  background-image: url("/pictures/background.avif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  color: black;
+  margin: 0px;
+}
+
+main {
+  height: auto;
+  min-height: 888px;
+  margin: auto 18%;
+  background: #ececec;
+  border: 2px solid #3a7cde;
+}
+
+/* Header Info - Several Nested Flex Boxes */
+header {
+  height: 104px;
+  top: 0px;
+  margin: 0px 18% 16px 18%;
+  background: #3a7cde;
+  border-radius: 0px 0px 8px 8px;
+}
+
+#header-container {
+  display: flex;
+  justify-content: space-between;
+  height: 104px;
+  align-items: center;
+}
+
+#header-left,
+#header-right {
+  display: flex;
+}
+
+/* Header Left Side (Logo) */
+
+#header-container a {
+  text-decoration: none;
+}
+
+#text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#text-container h1,
+#text-container h2 {
+  margin: 0 0 0 24px;
+}
+
+#header-container img {
+  /* Blue Logo */
+  width: 72px;
+  height: 72px;
+  margin-left: 16px;
+}
+
+#logo-text-top {
+  font-family: "Pacifico", cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 42px;
+  display: flex;
+  align-items: center;
+  color: #ffb800;
+}
+
+#logo-text-bottom {
+  font-family: "Combo", cursive;
+  padding: 6px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 31px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+/* Header Right Side (Buttons) */
+#header-right input {
+  transition: 0.2s;
+  background: #ffb800;
+  border: 3px solid black;
+  box-sizing: border-box;
+  border-radius: 8px;
+  height: 40px;
+  width: 120px;
+  cursor: pointer;
+  margin-right: 24px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  color: black;
+}
+
+#header-right input:hover {
+  transition: 0.2s;
+  background-color: rgba(0, 97, 0, 0.5);
+  color: white;
+}
+
+/* Nav Bar - Top of Main */
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 16px 18% 0px 18%;
+  height: 32px;
+  background-color: rgba(58, 124, 222, 1);
+  color: #ffb800;
+  font-weight: 400;
+}
+
+nav span a {
+  font-size: 18px;
+  color: #ffb800;
+  text-decoration: none;
+}
+
+nav span a:hover {
+  color: rgba(218, 42, 42, 0.75);
+  text-decoration: underline;
+}
+
+/* Page Content */
+
+main h1 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.container {
+  grid-area: "header";
+  font-weight: 700;
+  font-size: 12pt;
+  text-decoration: underline;
+  margin: auto;
+  margin-bottom: 16px;
+  text-align: center;
+  width: 90%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 50% 16.7% 16.7% 16.7%;
+  grid-template-rows: auto;
+}
+
+.container h2 {
+  margin: 0;
+}
+
+.order {
+  grid-area: "order";
+  display: grid;
+  grid-template-columns: 50% 16.7% 16.7% 16.7%;
+  grid-template-rows: auto;
+  align-items: center;
+  text-align: center;
+  padding: 8px 16px;
+  background: rgba(70, 166, 255, 0.35);
+  width: 90%;
+  margin: 8px auto;
+  border-radius: 8px;
+}
+
+.order:hover {
+  outline: 2px solid rgba(255, 184, 0, 1);
+}
+/* Custom Order Options */
+
+.item-select {
+  width: 100%;
+  padding: 3px;
+}
+
+.item-select:focus,
+.item-select:hover {
+  outline: 2px solid rgba(255, 184, 0, 1);
+}
+
+/* Totals */
+#total {
+  display: grid;
+  width: 90%;
+  /* text-align: right; */
+  margin: auto;
+  margin-top: 24px;
+  line-height: 32px;
+  margin-bottom: 32px;
+  grid-template-areas:
+    "form form orderButton"
+    ". . subtotal"
+    ". . hst"
+    ". . total"
+    ". . button";
+}
+
+.grid-align {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid-hst,
+.grid-subtotal {
+  font-size: 20px;
+}
+
+.grid-orderButton {
+  grid-area: orderButton;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.grid-subtotal {
+  grid-area: subtotal;
+}
+
+.grid-hst {
+  grid-area: hst;
+  border-bottom: 1px solid black;
+}
+
+.grid-total {
+  margin-top: 10px;
+  margin-bottom: 40px;
+  grid-area: total;
+  font-size: 32px;
+}
+
+.grid-form {
+  grid-area: form;
+  width: 536px;
+  height: 216px;
+  grid-row-start: 1;
+  grid-row-end: all;
+}
+
+.grid-placeOrder {
+  grid-area: button;
+  text-align: center;
+}
+
+#final-total {
+  border-bottom: 4px double black;
+}
+
+/* Button that loads Totals onto the page */
+#finish {
+  width: 75%;
+}
+
+#finish,
+#place-order-button {
+  border-radius: 8px;
+  padding: 10px 20px;
+  background-color: rgba(15, 15, 15, 1);
+  color: white;
+  border: 2px solid rgba(255, 184, 0, 1);
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+#finish:hover {
+  background-color: yellow;
+  color: black;
+  transition: 0.2s;
+}
+
+#place-order-button {
+  font-size: 36px;
+  width: 90%;
+  /* width: 208px;
+  height: 80px; */
+}
+
+/* Customer Info Form */
+.grid-form {
+  border: 1px solid black;
+  width: 95%;
+  height: 100%;
+  padding: 8px;
+  background: #8fc6fa;
+  border: 2px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.grid-form hr {
+  border: 1px solid black;
+}
+
+#full-name {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid-flex {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px 0 0;
+}
+
+.grid-form input {
+  padding: 4px;
+}
+
+.grid-form input:focus,
+.grid-form input:hover {
+  outline: 2px solid rgba(255, 184, 0, 1);
+}
+
+.grid-form input::-webkit-outer-spin-button,
+.grid-form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Footer - much the same as nav */
+
+#footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0px 18% 0px 18%;
+  height: 24px;
+  background-color: rgba(58, 124, 222, 1);
+  color: #ffb800;
+  font-size: 8px;
+}

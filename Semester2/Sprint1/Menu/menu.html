@@ -1,0 +1,484 @@
+<!-- Software Development Semester 2, Keyin College -->
+<!-- Web Design: Sprint 1 -->
+<!-- Developers: Alex Ridgeley and David Bishop (Team 1) -->
+<!-- Date: February 25, 2022 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu</title>
+    <link rel="stylesheet" href="menu.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Combo&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sunflower:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <script src="script.js"></script>
+    <header>
+      <div id="header-container">
+        <a href="/Main-Page/homepage.html">
+          <div id="header-left">
+            <img src="/pictures/Blue-Logo.avif" alt="Restaurant Logo" />
+            <div id="text-container">
+              <h1 id="logo-text-top">Gary Blue's Diner</h1>
+              <h2 id="logo-text-bottom">Fresh and ready to serve!</h2>
+            </div>
+          </div>
+        </a>
+        <div id="header-right">
+          <form action="/Menu/menu.html">
+            <input id="menu-button" type="submit" value="Menu" />
+          </form>
+          <form action="/Order-Page/index.html">
+            <input id="order-now-button" type="submit" value="Order Now!" />
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="menu-header">
+        <img
+          src="/pictures/review_burger.avif"
+          alt="A Burger"
+          width="260"
+          height="165"
+        />
+      </div>
+
+      <div class="menu-header">
+        <img
+          src="/pictures/nachos.avif"
+          alt="Nachos"
+          width="260"
+          height="165"
+        />
+      </div>
+
+      <div class="menu-header">
+        <img
+          src="/pictures/Pancakes.avif"
+          alt="Differe Burger"
+          width="260"
+          height="165"
+        />
+      </div>
+
+      <!-- Main Dishes -->
+      <div class="menu-main">
+        <div class="menu-head"><h2>Main</h2></div>
+        <div>
+          <p class="special">Main items available after 11 a.m.</p>
+        </div>
+        <div class="menu-item" onclick="toggleText(0)">
+          <div>
+            <p class="price">$14.75</p>
+          </div>
+          <div>
+            <h3>The Big Gary</h3>
+          </div>
+          <div>
+            <img class="arrow" src="/pictures/arrow.png" alt="" />
+          </div>
+        </div>
+        <p class="main-menu-item">
+          A whole chicken breast, fried and seasoned with a cayenne kick, served
+          on a sesame seed bun with pickles and spicy mayo.
+        </p>
+
+        <div class="menu-item" onclick="toggleText(1)">
+          <div>
+            <p class="price">$8.99</p>
+          </div>
+          <div>
+            <h3>Regular Burger</h3>
+          </div>
+          <div>
+            <img class="arrow" src="/pictures/arrow.png" alt="" />
+          </div>
+        </div>
+        <p class="main-menu-item">
+          Classic burger with good ol' ketchup, along with any other sauce or
+          toppings of your choosing.
+        </p>
+
+        <div class="menu-item" onclick="toggleText(2)">
+          <div>
+            <p class="price">$9.45</p>
+          </div>
+          <div>
+            <h3>Classic Cheeseburger</h3>
+          </div>
+          <div>
+            <img class="arrow" src="/pictures/arrow.png" alt="" />
+          </div>
+        </div>
+        <p class="main-menu-item">
+          Classic cheese burger with any sauce and toppings of your choosing.
+        </p>
+
+        <div class="menu-item" onclick="toggleText(3)">
+          <div>
+            <p class="price">$11.99</p>
+          </div>
+          <div>
+            <h3>The Works Burger</h3>
+          </div>
+          <div>
+            <img class="arrow" src="/pictures/arrow.png" alt="" />
+          </div>
+        </div>
+        <p class="main-menu-item">
+          Our classic burger on two paddies and filled with toppings. Onions,
+          pickle, cheese, gherkins, lettuce & tomato.
+        </p>
+
+        <div class="menu-item" onclick="toggleText(4)">
+          <div>
+            <p class="price">$10.50</p>
+          </div>
+          <div>
+            <h3>Chili Burger</h3>
+          </div>
+          <div>
+            <img class="arrow" src="/pictures/arrow.png" alt="" />
+          </div>
+        </div>
+        <p class="main-menu-item">
+          Classic burger filled with fresh chili and chili flakes.
+        </p>
+
+        <div class="menu-item" onclick="toggleText(5)">
+          <div>
+            <p class="price">$10.75</p>
+          </div>
+          <div>
+            <h3>Juicy Lucy Burger</h3>
+          </div>
+          <div>
+            <img class="arrow" src="/pictures/arrow.png" alt="" />
+          </div>
+        </div>
+        <p class="main-menu-item">
+          One cheese filled burger topped with lettuce, onion & pickle.
+        </p>
+
+        <div class="menu-item" onclick="toggleText(6)">
+          <div>
+            <p class="price">$8.75</p>
+          </div>
+          <div>
+            <h3>Hot Dog</h3>
+          </div>
+          <div>
+            <img class="arrow" src="/pictures/arrow.png" alt="" />
+          </div>
+        </div>
+        <p class="main-menu-item">
+          Classic hot dog with sauce and toppings of your choosing.
+        </p>
+
+        <div class="menu-item" onclick="toggleText(7)">
+          <div>
+            <p class="price">$9.75</p>
+          </div>
+          <div>
+            <h3>Chili Dog</h3>
+          </div>
+          <div>
+            <img class="arrow" src="/pictures/arrow.png" alt="" />
+          </div>
+        </div>
+        <p class="main-menu-item">
+          Classic hot dog filled with fresh chili and cheese.
+        </p>
+      </div>
+
+      <!-- Sides and Appetizers -->
+      <div class="sides">
+        <div class="menu-head"><h2>Appetizers & Sides</h2></div>
+        <div>
+          <p class="special">
+            All menu items come with a side of fries or hashbrowns!
+          </p>
+        </div>
+
+        <div class="menu-item" onclick="toggleText(8)">
+          <div>
+            <p class="price">$3.75</p>
+          </div>
+          <div>
+            <h3>Classic Fries</h3>
+          </div>
+          <div>
+            <img class="arrow" src="/pictures/arrow.png" alt="" />
+          </div>
+        </div>
+        <p class="main-menu-item">
+          Crispy, golden homestyle French Fries. They come straight cut, curly,
+          waffle style.
+        </p>
+
+        <div class="menu-item" onclick="toggleText(9)">
+          <div>
+            <p class="price">$12.75</p>
+          </div>
+          <div>
+            <h3>Wings</h3>
+          </div>
+          <div>
+            <img class="arrow" src="/pictures/arrow.png" alt="" />
+          </div>
+        </div>
+        <p class="main-menu-item">Deep-fried wings tossed in secret spices.</p>
+
+        <div class="menu-item" onclick="toggleText(10)">
+          <div>
+            <p class="price">$11.99</p>
+          </div>
+          <div>
+            <h3>Nachos</h3>
+          </div>
+          <div>
+            <img class="arrow" src="/pictures/arrow.png" alt="" />
+          </div>
+        </div>
+        <p class="main-menu-item">
+          Nachos with cheese, chicken, beef, green and yellow peppers and a
+          choice of sauce.
+        </p>
+        <div class="menu-item" onclick="toggleText(11)">
+          <div>
+            <p class="price">$6.99</p>
+          </div>
+          <div>
+            <h3>Mozza Sticks</h3>
+          </div>
+          <div>
+            <img class="arrow" src="/pictures/arrow.png" alt="" />
+          </div>
+        </div>
+        <p class="main-menu-item">
+          Mouth watering Mozzarella sticks - amazing flavor.
+        </p>
+      </div>
+
+      <!-- Breakfast -->
+      <div class="menu-main">
+        <div class="menu-head"><h2>Breakfast</h2></div>
+        <div>
+          <p class="special">Breakfast served all day!</p>
+        </div>
+        <div class="menu-item" onclick="toggleText(12)">
+          <div>
+            <p class="price">$7.55</p>
+          </div>
+          <div>
+            <h3>Scrambled Eggs</h3>
+          </div>
+          <div>
+            <img class="arrow" src="/pictures/arrow.png" alt="" />
+          </div>
+        </div>
+        <p class="main-menu-item">
+          Your classic scambled eggs with three fillings smoked ham, bacon,
+          german sausages.
+        </p>
+
+        <div class="menu-item" onclick="toggleText(13)">
+          <div>
+            <p class="price">$9.25</p>
+          </div>
+          <div>
+            <h3>Meat Omelette</h3>
+          </div>
+          <div>
+            <img class="arrow" src="/pictures/arrow.png" alt="" />
+          </div>
+        </div>
+        <p class="main-menu-item">
+          Three-egg Omelette with german sausage, bacon, roasted pepers and
+          onions with cheese.
+        </p>
+
+        <div class="menu-item" onclick="toggleText(14)">
+          <div>
+            <p class="price">$8.99</p>
+          </div>
+          <div>
+            <h3>Veggie-Cheese Omelette</h3>
+          </div>
+          <div>
+            <img class="arrow" src="/pictures/arrow.png" alt="" />
+          </div>
+        </div>
+        <p class="main-menu-item">
+          Three-egg Omelette with roasted pepers and onions, mushrooms, tomatoes
+          and cheese.
+        </p>
+
+        <div class="menu-item" onclick="toggleText(15)">
+          <div>
+            <p class="price">$8.99</p>
+          </div>
+          <div>
+            <h3>Western Omelette</h3>
+          </div>
+          <div>
+            <img class="arrow" src="/pictures/arrow.png" alt="" />
+          </div>
+        </div>
+        <p class="main-menu-item">
+          Three-egg Omelette with roasted pepers and onions, diced ham and
+          western cheese.
+        </p>
+
+        <div class="menu-item" onclick="toggleText(16)">
+          <div>
+            <p class="price">$6.99</p>
+          </div>
+          <div>
+            <h3>Eggs on Toast</h3>
+          </div>
+          <div>
+            <img class="arrow" src="/pictures/arrow.png" alt="" />
+          </div>
+        </div>
+        <p class="main-menu-item">Fried or poached eggs serves with bread.</p>
+
+        <div class="menu-item" onclick="toggleText(17)">
+          <div>
+            <p class="price">$7.99</p>
+          </div>
+          <div>
+            <h3>Waffles</h3>
+          </div>
+          <div>
+            <img class="arrow" src="/pictures/arrow.png" alt="" />
+          </div>
+        </div>
+        <p class="main-menu-item">
+          Two waffles with cinnamon powder, wipped cream, a choice of syrup and
+          a choice of filling(s).
+        </p>
+
+        <div class="menu-item" onclick="toggleText(18)">
+          <div>
+            <p class="price">$7.99</p>
+          </div>
+          <div>
+            <h3>Pancakes</h3>
+          </div>
+          <div>
+            <img class="arrow" src="/pictures/arrow.png" alt="" />
+          </div>
+        </div>
+        <p class="main-menu-item">
+          Two Pancakes with kiwi, wipped cream, a choice of syrup and a choice
+          of filling(s). Blueberry pancakes also available.
+        </p>
+
+        <div class="menu-item" onclick="toggleText(19)">
+          <div>
+            <p class="price">$9.99</p>
+          </div>
+          <div>
+            <h3>Breakfast Burrito</h3>
+          </div>
+          <div>
+            <img class="arrow" src="/pictures/arrow.png" alt="" />
+          </div>
+        </div>
+        <p class="main-menu-item">
+          Wheat Tortilla, italian sausage, bits of ham, scrambled eggs and kiwi.
+        </p>
+      </div>
+
+      <!-- Drinks -->
+
+      <div class="drinks">
+        <div class="drink-head"><h2>Beverages</h2></div>
+        <p class="drink-special">All drinks only $1.25!</p>
+        <div class="vl"></div>
+        <p class="drink-special">Shakes are $3.25</p>
+        <div>
+          <h3>Pepsi</h3>
+        </div>
+        <div class="vl"></div>
+        <div>
+          <h3>Vanilla Shake</h3>
+        </div>
+        <div>
+          <h3>7up</h3>
+        </div>
+        <div class="vl"></div>
+        <div>
+          <h3>Strawberry Shake</h3>
+        </div>
+        <div>
+          <h3>Sprite</h3>
+        </div>
+        <div class="vl"></div>
+        <div>
+          <h3>Cherry Shake</h3>
+        </div>
+        <div>
+          <h3>Fanta</h3>
+        </div>
+        <div class="vl"></div>
+        <div>
+          <h3>Banana Split - $4.25</h3>
+        </div>
+        <div>
+          <h3>Root Beer</h3>
+        </div>
+        <div class="vl"></div>
+        <div>
+          <h3>Cheesecake - $4.25</h3>
+        </div>
+        <div>
+          <h3>Lemonade</h3>
+        </div>
+        <div class="vl"></div>
+        <div>
+          <h3>Moomoo Milk</h3>
+        </div>
+        <div>
+          <h3>Soda Pop</h3>
+        </div>
+        <div class="vl"></div>
+        <div>
+          <h3>Berry Juice</h3>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <nav id="footer">
+        <span><a href="menu.html">Menu</a></span>
+        <span><a href="/Error-Page/error.html">Our Employees</a></span>
+        <span><a href="/Error-Page/error.html">Community Outreach</a></span>
+        <span><a href="/Error-Page/error.html">Global Delivery</a></span>
+      </nav>
+    </footer>
+  </body>
+</html>
