@@ -21,10 +21,9 @@ target/
 .idea
 *.iws
 *.iml
-*.ipr
 
 # Docker
-/back-end/docker-compose.yml
+/Full-Stack_SpringAPI_Sprint_Final/back-end/docker-compose.yml
 
 # NetBeans
 /nbproject/private/
@@ -182,3 +181,4 @@ dist
 
 # End of https://www.toptal.com/developers/gitignore/api/node
 .DS_Store
+Semester4/Full-Stack_SpringAPI_Sprint_Final/back-end/docker-compose.yml
