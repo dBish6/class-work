@@ -112,7 +112,7 @@
   right: 158px;
 }
 
-/* Label focus */
+/* Label Animation */
 .registerForm .formMain input:focus + #usernameLabel,
 .registerForm .formMain input:focus + #emailLabel,
 .registerForm .formMain input:focus + #passwordLabel,
