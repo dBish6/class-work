@@ -12,6 +12,7 @@ __DockerHub Container Repo:__<br />
 `https://hub.docker.com/repository/docker/dbish6/finalsprint_raven_api_repo`
 
 __Deployed Stable Version of the Website:__<br />
+<i>\*URL doesn't work anymore sense the school stopped paying for it after we graduated >:( and I'm not going to pay for it haha, sorry!\*<i>
 `http://ravenblacksmith.xyz.s3-website-us-east-1.amazonaws.com/home`
 
 ## Testing
